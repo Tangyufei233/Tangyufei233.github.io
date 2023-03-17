@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Develop Blogs of YufeiTang</title>
+  
+  <subtitle>唐钰斐的Hexo博客</subtitle>
+  <link href="https://tangyufei233.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://tangyufei233.github.io/"/>
+  <updated>2023-03-17T16:30:05.622Z</updated>
+  <id>https://tangyufei233.github.io/</id>
+  
+  <author>
+    <name>Yufei Tang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>README</title>
+    <link href="https://tangyufei233.github.io/2023/03/18/README/"/>
+    <id>https://tangyufei233.github.io/2023/03/18/README/</id>
+    <published>2023-03-17T16:29:26.000Z</published>
+    <updated>2023-03-17T16:30:05.622Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="markdown-tutorial">Markdown-Tutorial<a title="#markdown-tutorial" href="#markdown-tutorial"></a></h1><h2 id="关于这份教程：">关于这份教程：<a title="#关于这份教程：" href="#关于这份教程："></a></h2><ul><li>这份教程主要是在<a href="https://typora.io/" target="_blank">Typora</a>编辑器中编写的，其语法是基于GIthub的。但显示效果与GIthub的有少许差异，基本上以针对GIthub，在语言上进行了修改。</li><li>这份教程是基于GIthub的Markdown语法，<a href="https://help.github.com/categories/writing-on-github/" target="_blank">GitHub Flavored Markdown</a></li><li>教程仍在完善中，会继续丰富更多的内容</li><li><strong>在不同编辑器中，也许显示效果或者语法有稍许不同，耐心参考下编辑器提供的帮助文档，或者Google下</strong></li><li>为了方便日后查阅，可以<strong>加星</strong>或者<strong>加个书签</strong></li></ul><h2 id="如何使用">如何使用<a title="#如何使用" href="#如何使用"></a></h2><p>面对一份教程，往往不知道该怎么做？这份教程，目前内容还不是很多。推荐两种使用方式：</p><ul><li>将<a href="QuickStart.md">QuickStart</a>熟悉一遍，边看边做，基本可以掌握常用的一些语法了</li><li>将这份教程当作工具书，需要使用什么的时候，查阅什么。比如，需要插入图片的时候，可以从下面的目录查找如何插入图片（善用页面查找，<code>Ctrl</code>+<code>F</code>）</li></ul><h2 id="检索">检索<a title="#检索" href="#检索"></a></h2><p><a href="QuickStart.md">快速开始（推荐）</a> ：常用的一些语法操作</p><p><a href="BlockElement.md#%E6%AE%B5%E8%90%BD%E5%92%8C%E6%8D%A2%E8%A1%8C%E7%AC%A6">段落、换行</a>：如何换行</p><p><a href="BlockElement.md#%E6%A0%87%E9%A2%98">标题</a>：创建一级标题、二级标题之类的，为了让文章有主次之分，表示各部分之间的关系</p><p><a href="BlockElement.md#%E5%BC%95%E7%94%A8">引用</a>：创建引用文字</p><p><a href="BlockElement.md#%E5%88%97%E8%A1%A8">列表</a>：创建有序列表，就是123这样的，或者无序列表</p><p><a href="BlockElement.md#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">任务列表</a>：在文字前面有个勾选框，一般记录待办事项</p><p><a href="BlockElement.md#%E4%BB%A3%E7%A0%81%E5%9D%97">代码</a>：输入代码和代码高亮</p><p><a href="BlockElement.md#%E8%A1%A8%E6%A0%BC">表格</a>：创建表格</p><p><a href="BlockElement.md#%E6%B0%B4%E5%B9%B3%E7%BA%BF%EF%BC%88%E5%88%86%E5%89%B2%E7%BA%BF%EF%BC%89">分割线</a>：创建分割线<br><a href="SpanElement.md#%E9%93%BE%E6%8E%A5">链接</a>：链接到其他文件，其他标题，或者其他网址</p><p><a href="SpanElement.md#%E9%93%BE%E6%8E%A5%E7%BD%91%E5%9D%80">链接网址</a></p><p><a href="SpanElement.md#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84">相对路径</a>：学会链接的必要知识</p><p><a href="SpanElement.md#%E9%93%BE%E6%8E%A5%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6">链接当前目录文件</a></p><p><a href="SpanElement.md#%E9%93%BE%E6%8E%A5%E5%85%B6%E4%BB%96%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6">链接其他目录文件</a></p><p><a href="SpanElement.md#%E9%93%BE%E6%8E%A5%E6%9F%90%E4%B8%80%E4%B8%AA%E6%A0%87%E9%A2%98">链接某一个标题</a></p><p><a href="SpanElement.md#%E9%93%BE%E6%8E%A5%E5%88%B0%E6%9F%90%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E6%9F%90%E4%B8%80%E4%B8%AA%E6%A0%87%E9%A2%98">链接到某一个文件的某一个标题</a></p><p><a href="SpanElement.md#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87">插入图片</a></p><p><a href="SpanElement.md#%E6%96%9C%E4%BD%93">斜体</a></p><p><a href="SpanElement.md#%E5%8A%A0%E5%BC%BA%EF%BC%88%E5%8A%A0%E7%B2%97%EF%BC%89">加强（加粗）</a></p><p><a href="SpanElement.md#%E7%AC%A6%E5%8F%B7%E6%8C%87%E7%A4%BA">符号指示</a>：像这样，<code>就这样</code></p><p><a href="SpanElement.md#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></p><h2 id="快速入门版">快速入门版<a title="#快速入门版" href="#快速入门版"></a></h2><p><a href="QuickStart.md">快速入门版</a></p><h2 id="完整版">完整版<a title="#完整版" href="#完整版"></a></h2><p><a href="Complete.md">完整版</a></p><h2 id="有兴趣的话">有兴趣的话<a title="#有兴趣的话" href="#有兴趣的话"></a></h2><center>公众号：「土堆碎念」</center><center>一些不成熟的想法与碎念</center><center>一些无趣，精心打造的教程</center><center>一个不知所云的人</center><p><img src="imgs/wechat.jpg" alt="wechat" loading="lazy" class="φbp"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;markdown-tutorial&quot;&gt;Markdown-Tutorial&lt;a title=&quot;#markdown-tutorial&quot; href=&quot;#markdown-tutorial&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;关于这份教程：&quot;&gt;关于这份教程：&lt;a tit</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://tangyufei233.github.io/2023/03/17/hello-world/"/>
+    <id>https://tangyufei233.github.io/2023/03/17/hello-world/</id>
+    <published>2023-03-16T16:38:28.697Z</published>
+    <updated>2023-03-16T16:38:28.697Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank">GitHub</a>.</p><h2 id="quick-start">Quick Start<a title="#quick-start" href="#quick-start"></a></h2><h3 id="create-a-new-post">Create a new post<a title="#create-a-new-post" href="#create-a-new-post"></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank">Writing</a></p><h3 id="run-server">Run server<a title="#run-server" href="#run-server"></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank">Server</a></p><h3 id="generate-static-files">Generate static files<a title="#generate-static-files" href="#generate-static-files"></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites<a title="#deploy-to-remote-sites" href="#deploy-to-remote-sites"></a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; targe</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
