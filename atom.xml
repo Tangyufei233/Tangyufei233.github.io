@@ -6,7 +6,7 @@
   <link href="https://tangyufei233.github.io/atom.xml" rel="self"/>
   
   <link href="https://tangyufei233.github.io/"/>
-  <updated>2023-03-17T16:30:05.622Z</updated>
+  <updated>2023-03-17T17:25:10.270Z</updated>
   <id>https://tangyufei233.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test1</title>
+    <link href="https://tangyufei233.github.io/2023/03/18/test1/"/>
+    <id>https://tangyufei233.github.io/2023/03/18/test1/</id>
+    <published>2023-03-18T01:18:31.955Z</published>
+    <updated>2023-03-17T17:25:10.270Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="markdown-教程">Markdown 教程<a title="#markdown-教程" href="#markdown-教程"></a></h1><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p><p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p><p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p><p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p><hr><h2 id="markdown-应用">Markdown 应用<a title="#markdown-应用" href="#markdown-应用"></a></h2><p>Markdown 能被使用来撰写电子书，如：Gitbook。</p><p>当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p><hr><h2 id="编辑器">编辑器<a title="#编辑器" href="#编辑器"></a></h2><p>本教程将使用 VSCode 编辑器来讲解 Markdown 的语法，VSCode 支持 MacOS 、Windows、Linux 平台，且包含多种主题。</p><p>VSCode 默认集成了 Markdown 文档编辑插件，原生就支持高亮 Markdown 的语法。</p><p>VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器。</p><ul><li>**VScode 安装教程：**<a href="https://www.runoob.com/w3cnote/vscode-tutorial.html" target="_blank">https://www.runoob.com/w3cnote/vscode-tutorial.html</a></li><li>**VScode 官网地址：**<a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></li></ul><p><img src="https://www.runoob.com/wp-content/uploads/2019/03/91542A7F-900B-4C1F-9FEA-BC418A0047E5.jpeg" alt="img" loading="lazy" class="φbp"></p><p>VSCode 实时预览还需要执行 <strong>Markdown: Open Preview to the Side</strong> 命令来实现。</p><p>在命令窗口输入 <strong>Markdown: Open Preview to the Side</strong> 命令：</p><p><img src="https://www.runoob.com/wp-content/uploads/2019/03/35CB35BB-AC03-4A0D-9C94-AC3B24AFCB30.jpeg" alt="img" loading="lazy" class="φbp"></p><p>最终效果：</p><p><img src="https://www.runoob.com/wp-content/uploads/2019/03/18EE1A99-AF14-4C67-85CD-A7261FD3464B.jpeg" alt="img" loading="lazy" class="φbp"></p><p>如果你需要将 markdown 转为 PDF、图片、HTML 等格式也可以安装对应的插件来实现。</p><p>你也可以使用我们的在线编辑器来测试：<a href="https://c.runoob.com/front-end/712%E3%80%82" target="_blank">https://c.runoob.com/front-end/712。</a></p><hr><h2 id="测试实例">测试实例<a title="#测试实例" href="#测试实例"></a></h2><p>接下来的测试中，我们先在 VSCode 下安装 <strong>Markdown Preview Enhanced</strong> 插件来实现更强大的功能。</p><p>点击右侧栏扩展按钮，查找<strong>Markdown Preview Enhanced</strong> 插件，点击安装：</p><p><img src="https://www.runoob.com/wp-content/uploads/2019/03/5D9D9109-C12A-4D81-9E91-3D3FE603DFB8.jpeg" alt="img" loading="lazy" class="φbp"></p><p><strong>安装完成后重启 VSCode。</strong></p><p>在 <a href="http://RUNOOB.md">RUNOOB.md</a> 输入以下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># RUNOOB Markdown Test</span><br><span class="line">## Hello World!</span><br></pre></td></tr></table></figure><p>将该代码格式粘贴到文件 <a href="http://RUNOOB.md">RUNOOB.md</a> 上，效果如下：</p><p><img src="https://www.runoob.com/wp-content/uploads/2019/03/123F0547-C529-4D85-920F-624E65D35DD3.jpeg" alt="img" loading="lazy" class="φbp"></p><p>在预览框中右击鼠标还提供了各种导出功能：</p><p><img src="https://www.runoob.com/wp-content/uploads/2019/03/3292631D-2230-48B5-A2B9-1E1DA1E522B7.jpeg" alt="img" loading="lazy" class="φbp"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;markdown-教程&quot;&gt;Markdown 教程&lt;a title=&quot;#markdown-教程&quot; href=&quot;#markdown-教程&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。&lt;/p&gt;
+&lt;p&gt;M</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>README</title>
