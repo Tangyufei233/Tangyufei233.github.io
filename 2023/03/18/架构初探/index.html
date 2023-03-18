@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> Markdown教程 -  Develop Blogs of YufeiTang</title>
+		<title> 架构初探 -  Develop Blogs of YufeiTang</title>
 		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
 		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 		<!-- lazyload -->
@@ -296,71 +296,142 @@
 <div class="kira-post">
 	<article>
 		
-		<div
-			class="kira-post-cover"
-			style="padding-bottom: '56.25%'"
-		>
+		<div class="kira-post-cover">
 			<img
-				data-src="http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg"
+				data-src="/img/persona11.jpg"
 				data-sizes="auto"
-				alt="Markdown教程"
+				alt="架构初探"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>Markdown教程</h1>
+			<h1>架构初探</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2023年03月18日</a>
-			<a><i class="kirafont icon-areachart"></i>459 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+			<a><i class="kirafont icon-areachart"></i>415 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
-		<h1><span id="markdown-教程">Markdown 教程</span></h1><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
-<hr>
-<h2><span id="markdown-应用">Markdown 应用</span></h2><p>Markdown 能被使用来撰写电子书，如：Gitbook。</p>
-<p>当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p>
-<hr>
-<h2><span id="编辑器">编辑器</span></h2><p>本教程将使用 VSCode 编辑器来讲解 Markdown 的语法，VSCode 支持 MacOS 、Windows、Linux 平台，且包含多种主题。</p>
-<p>VSCode 默认集成了 Markdown 文档编辑插件，原生就支持高亮 Markdown 的语法。</p>
-<p>VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器。</p>
+		<h3><span id="什么是架构">什么是架构</span></h3><p>常见软件架构：</p>
 <ul>
-<li><strong>VScode 安装教程：</strong><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/vscode-tutorial.html">https://www.runoob.com/w3cnote/vscode-tutorial.html</a></li>
-<li><strong>VScode 官网地址：</strong><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+<li>单机</li>
+<li>单体(分布式部署)<ul>
+<li>水平扩容</li>
+<li>运维不需要停服</li>
 </ul>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/91542A7F-900B-4C1F-9FEA-BC418A0047E5.jpeg" alt="img" class="lazyload"></p>
-<p>VSCode 实时预览还需要执行 <strong>Markdown: Open Preview to the Side</strong> 命令来实现。</p>
-<p>在命令窗口输入 <strong>Markdown: Open Preview to the Side</strong> 命令：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/35CB35BB-AC03-4A0D-9C94-AC3B24AFCB30.jpeg" alt="img" class="lazyload"></p>
-<p>最终效果：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/18EE1A99-AF14-4C67-85CD-A7261FD3464B.jpeg" alt="img" class="lazyload"></p>
-<p>如果你需要将 markdown 转为 PDF、图片、HTML 等格式也可以安装对应的插件来实现。</p>
-<p>你也可以使用我们的在线编辑器来测试：<a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/712%E3%80%82">https://c.runoob.com/front-end/712。</a></p>
-<hr>
-<h2><span id="测试实例">测试实例</span></h2><p>接下来的测试中，我们先在 VSCode 下安装 <strong>Markdown Preview Enhanced</strong> 插件来实现更强大的功能。</p>
-<p>点击右侧栏扩展按钮，查找<strong>Markdown Preview Enhanced</strong> 插件，点击安装：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/5D9D9109-C12A-4D81-9E91-3D3FE603DFB8.jpeg" alt="img" class="lazyload"></p>
-<p><strong>安装完成后重启 VSCode。</strong></p>
-<p>在 RUNOOB.md 输入以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># RUNOOB Markdown Test<br>## Hello World!<br></code></pre></td></tr></table></figure>
-
-<p>将该代码格式粘贴到文件 RUNOOB.md 上，效果如下：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/123F0547-C529-4D85-920F-624E65D35DD3.jpeg" alt="img" class="lazyload"></p>
-<p>在预览框中右击鼠标还提供了各种导出功能：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/3292631D-2230-48B5-A2B9-1E1DA1E522B7.jpeg" alt="img" class="lazyload"></p>
+</li>
+<li>垂直应用(按应用垂直切分)</li>
+<li>SOA (Service Oriented Architecture)<ul>
+<li>将应用的不同功能单元抽象为**服务 **  </li>
+<li>定义服务之间的<strong>通信标准</strong></li>
+</ul>
+</li>
+<li>微服务 (Microservice)<ul>
+<li>去中心化方向的服务之间通信的最终形态</li>
+<li>不同模块的RD可以专心于自己的业务逻辑了，开发迭代效率得到显著的提高。</li>
+<li>各个服务独立运维，变更操作的影响面可控了</li>
+</ul>
+</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/edc32b15710f42bcacd50b1d9ecece0e~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f18bc65694664a8680d170c97c155d61~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="企业级后端架构剖析">企业级后端架构剖析</span></h3><ul>
+<li>云计算<ul>
+<li>基础<ul>
+<li>虚拟化技术（硬件（虚拟机）、操作系统（容器）、网络）</li>
+<li>编排方案 （虚拟机编排方案（OpenStack）、容器编排方案（Kubernetes））</li>
+</ul>
+</li>
+<li>架构<ul>
+<li>IaaS (Infrastructure as a Service)</li>
+<li>Paas (Platform as a Service)   </li>
+<li>Saas (Software as a Service)</li>
+<li>FaaS (Function as a Service)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>云原生<br> <br>代表技术：<br>- 容器化<br>- 服务网格<br>- 微服务<br>- 不可变基础架构<br>- 声明式API</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d10fcf67d21484a80d4fdeb45ebd610~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<ul>
+<li>弹性资源计算类型：<ul>
+<li>服务资源调度</li>
+<li>计算资源调度</li>
+<li>消息队列</li>
+</ul>
+</li>
+<li>弹性资源存储类型<ul>
+<li>经典<ul>
+<li>对象：宣传视频</li>
+<li>大数据：用户消费记录</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关系型数据库</li>
+<li>元数据</li>
+<li>NoSQL<br>微服务架构选择：</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/05c84833fbff43b5affdc68bd1c2c2ac~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>服务网格：</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d1397485f2974c22aad61843dc8b4952~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="企业级后端架构的挑战">企业级后端架构的挑战</span></h3><ul>
+<li>离线任务</li>
+<li>在线任务</li>
+<li>IO 密集型</li>
+<li>CPU 密集型</li>
+<li>服务治理</li>
+<li>IPC (Inter-Process Communication)</li>
+<li>RPC (Remote Procedure Call)</li>
+</ul>
+<h1><span id="三-实践练习例子"><strong>三、实践练习例子：</strong></span></h1><p>通过蛋糕店遇到以下问题来设计架构：</p>
+<ul>
+<li>不同师傅干活的效率差距较大</li>
+<li>有些师傅希望【能者多劳多挣】<br>通过CPU水位负载均衡，设计架构</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/060cad8691e7480381827a39b4ec2700~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bd82ad46ad534dcc9535f967e368fec2~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13aed2b5e7ab4682b85fd5d1662f1ea5~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/efa5e596f2394168853d95560c1cf00f~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
 
 	</article>
 
 	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/03/18/%E6%9E%B6%E6%9E%84%E5%88%9D%E6%8E%A2/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;03&#x2F;18&#x2F;架构初探&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;03&#x2F;18&#x2F;架构初探&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
 	<div class="kira-post-nav">
 		<nav class="post-nav">
-			      
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			                           
+			<!-- 在找到当前文章所在的 index -->
+			                                
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/03/18/%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/"> 规则引擎</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/03/18/%E5%88%9D%E8%AF%86%E5%BE%AE%E6%9C%8D%E5%8A%A1/"> 初识微服务</a>
+			</div>
+			                                              
 		</nav>
 	</div>
 	
 	<div class="kira-post-meta kira-rainbow">
 		
+			<a class="kirafont icon-appstore-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a>
 		
 	</div>
 	
@@ -375,7 +446,7 @@
 		var gitalk = new Gitalk({
 			clientID: '-id-',
 			clientSecret: '-key-',
-			id: 'Markdown教程',
+			id: '架构初探',
 			repo: '-issue repo name-',
 			owner: '-your github username-',
 			admin: '-your github username-',

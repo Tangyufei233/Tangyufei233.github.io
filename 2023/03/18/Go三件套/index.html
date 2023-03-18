@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> Markdown教程 -  Develop Blogs of YufeiTang</title>
+		<title> Go三件套 -  Develop Blogs of YufeiTang</title>
 		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
 		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 		<!-- lazyload -->
@@ -296,71 +296,90 @@
 <div class="kira-post">
 	<article>
 		
-		<div
-			class="kira-post-cover"
-			style="padding-bottom: '56.25%'"
-		>
+		<div class="kira-post-cover">
 			<img
-				data-src="http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg"
+				data-src="/img/persona8.webp"
 				data-sizes="auto"
-				alt="Markdown教程"
+				alt="Go三件套"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>Markdown教程</h1>
+			<h1>Go三件套</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2023年03月18日</a>
-			<a><i class="kirafont icon-areachart"></i>459 字</a>
+			<a><i class="kirafont icon-areachart"></i>471 字</a>
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
 		</div>
-		<h1><span id="markdown-教程">Markdown 教程</span></h1><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
-<hr>
-<h2><span id="markdown-应用">Markdown 应用</span></h2><p>Markdown 能被使用来撰写电子书，如：Gitbook。</p>
-<p>当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p>
-<hr>
-<h2><span id="编辑器">编辑器</span></h2><p>本教程将使用 VSCode 编辑器来讲解 Markdown 的语法，VSCode 支持 MacOS 、Windows、Linux 平台，且包含多种主题。</p>
-<p>VSCode 默认集成了 Markdown 文档编辑插件，原生就支持高亮 Markdown 的语法。</p>
-<p>VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器。</p>
-<ul>
-<li><strong>VScode 安装教程：</strong><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/vscode-tutorial.html">https://www.runoob.com/w3cnote/vscode-tutorial.html</a></li>
-<li><strong>VScode 官网地址：</strong><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
-</ul>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/91542A7F-900B-4C1F-9FEA-BC418A0047E5.jpeg" alt="img" class="lazyload"></p>
-<p>VSCode 实时预览还需要执行 <strong>Markdown: Open Preview to the Side</strong> 命令来实现。</p>
-<p>在命令窗口输入 <strong>Markdown: Open Preview to the Side</strong> 命令：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/35CB35BB-AC03-4A0D-9C94-AC3B24AFCB30.jpeg" alt="img" class="lazyload"></p>
-<p>最终效果：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/18EE1A99-AF14-4C67-85CD-A7261FD3464B.jpeg" alt="img" class="lazyload"></p>
-<p>如果你需要将 markdown 转为 PDF、图片、HTML 等格式也可以安装对应的插件来实现。</p>
-<p>你也可以使用我们的在线编辑器来测试：<a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/712%E3%80%82">https://c.runoob.com/front-end/712。</a></p>
-<hr>
-<h2><span id="测试实例">测试实例</span></h2><p>接下来的测试中，我们先在 VSCode 下安装 <strong>Markdown Preview Enhanced</strong> 插件来实现更强大的功能。</p>
-<p>点击右侧栏扩展按钮，查找<strong>Markdown Preview Enhanced</strong> 插件，点击安装：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/5D9D9109-C12A-4D81-9E91-3D3FE603DFB8.jpeg" alt="img" class="lazyload"></p>
-<p><strong>安装完成后重启 VSCode。</strong></p>
-<p>在 RUNOOB.md 输入以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># RUNOOB Markdown Test<br>## Hello World!<br></code></pre></td></tr></table></figure>
-
-<p>将该代码格式粘贴到文件 RUNOOB.md 上，效果如下：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/123F0547-C529-4D85-920F-624E65D35DD3.jpeg" alt="img" class="lazyload"></p>
-<p>在预览框中右击鼠标还提供了各种导出功能：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/3292631D-2230-48B5-A2B9-1E1DA1E522B7.jpeg" alt="img" class="lazyload"></p>
+		<h4><span id="gorm">Gorm</span></h4><p>一个已经迭代了10年+的功能强大的ORM框架，拥有非常丰富的开源拓展。</p>
+<h4><span id="kitex">Kitex</span></h4><p>字节内部的微服务RPC框架，具有高性能、强可拓展的主要特点，支持多协议并且拥有丰富开源拓展。</p>
+<h4><span id="hertz">Hertz</span></h4><p>是字节内部的HTTP框架，参考了其他开源框架的优势，结合字节跳动的需求，具有高易用、高性能、高拓展性特点。</p>
+<h4><span id="gorm使用">GORM使用</span></h4><p>昨天寄过了。</p>
+<h4><span id="kitex使用">Kitex使用</span></h4><h5><span id="kitex安装">Kitex安装</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/99bc6176d80646c4b0ec3967892be19c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="定义idl">定义IDL</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/18fc173c48704ddbade501e56e9d097c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="kitex生成代码">Kitex生成代码</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e8d958f747d94c13b86377a1e6b0a28c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>使用<code>kitex -module example -service example echo.thrift</code>生成代码<br><br><code>build.sh</code>生成脚本<br><br><code>kitex_gen</code>:IDL内容相关的生成代码，主要是基础的Server&#x2F;Client代码<br><br>main.go 程序入口<br><br>handler.go 用户在该文件里实现IDL service定义的方法</p>
+<h5><span id="kitex-client发起请求">Kitex Client发起请求</span></h5><p>创建Client</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/50393a5a43074e66af20fc54ccba127b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>发起请求</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1079b451077c4245b6d5c19b79ceee77~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="kitex服务注册与发现">Kitex服务注册与发现</span></h5><p>目前，Kiex的服务注册与发现已经对接了主流服务注册与发现中心，如ETCD，Nacos等。</p>
+<h4><span id="hertz基本使用">Hertz基本使用</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2e07a5f86c00461ca2594ac7e45248a4~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>使用Hertz实现，服务监听8080端口并注册了一个GET方法的路由函数。</p>
+<h5><span id="hertz路由">Hertz路由</span></h5><p>Hertz提供了GET、POST、PUT、DELETE、ANY等方法用于注册路由</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b206897091942dda4260f2537982d5b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>Hertz提供了路由组（Group）的能力，用于支持路由分组的功能。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f2061e40953a4727ab6df5ea507cf490~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>Hertz提供了参数路由和通配路由，优先级为：静态路由&gt;命名路由&gt;通配路由</p>
+<h5><span id="hertz参数绑定">Hertz参数绑定</span></h5><p>Hertz提供了Bind、Validate、BindAndValidate函数用于进行参数绑定和校验</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fdaf6e46c7e7497788ed92269857780a~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="hertz中间件">Hertz中间件</span></h5><p>Hertz的中间件主要分为客户端中间件与服务端中间件，如下展示了一个服务端中间件</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9167d97da34e499e918fcd7fd18e3af7~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="hertz-client">Hertz Client</span></h5><p>Hertz提供了HTTP Client用于帮助用户发送HTTP请求</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb012ec7ff40445795b73b5997270937~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="hertz代码生成工具">Hertz代码生成工具</span></h5><p>目录结构</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1254f15cecf54ae89e6b949f17a2a252~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>生成文件</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e2ca0dc478da4b14993dc111c6cf71be~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="hertz性能">Hertz性能</span></h5><p>1.网络库Netpoll<br>2.Json解编码Sonic<br>3.使用sync.Pool复用对象协议层数据解析优化</p>
+<h5><span id="hertz生态">Hertz生态</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b610d69e32b480cbeb093d14a5d17d6~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
 
 	</article>
 
 	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/03/18/Go%E4%B8%89%E4%BB%B6%E5%A5%97/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;03&#x2F;18&#x2F;Go三件套&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;03&#x2F;18&#x2F;Go三件套&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
 	<div class="kira-post-nav">
 		<nav class="post-nav">
-			      
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			                  
+			<!-- 在找到当前文章所在的 index -->
+			                    
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/03/18/GORM%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%A6%82%E5%BF%B5/"> GORM基础与概念</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/03/18/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/"> 后端开发流程</a>
+			</div>
+			                                                                   
 		</nav>
 	</div>
 	
 	<div class="kira-post-meta kira-rainbow">
 		
+			<a class="kirafont icon-appstore-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/Golang/" rel="tag">Golang</a>
 		
 	</div>
 	
@@ -375,7 +394,7 @@
 		var gitalk = new Gitalk({
 			clientID: '-id-',
 			clientSecret: '-key-',
-			id: 'Markdown教程',
+			id: 'Go三件套',
 			repo: '-issue repo name-',
 			owner: '-your github username-',
 			admin: '-your github username-',

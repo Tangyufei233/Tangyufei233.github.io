@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> Markdown教程 -  Develop Blogs of YufeiTang</title>
+		<title> RDBMS -  Develop Blogs of YufeiTang</title>
 		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
 		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 		<!-- lazyload -->
@@ -296,71 +296,200 @@
 <div class="kira-post">
 	<article>
 		
-		<div
-			class="kira-post-cover"
-			style="padding-bottom: '56.25%'"
-		>
+		<div class="kira-post-cover">
 			<img
-				data-src="http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg"
+				data-src="/img/persona19.jpg"
 				data-sizes="auto"
-				alt="Markdown教程"
+				alt="RDBMS"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>Markdown教程</h1>
+			<h1>RDBMS</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2023年03月18日</a>
-			<a><i class="kirafont icon-areachart"></i>459 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+			<a><i class="kirafont icon-areachart"></i>1.2k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 5 分钟</a>
 		</div>
-		<h1><span id="markdown-教程">Markdown 教程</span></h1><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
-<hr>
-<h2><span id="markdown-应用">Markdown 应用</span></h2><p>Markdown 能被使用来撰写电子书，如：Gitbook。</p>
-<p>当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p>
-<hr>
-<h2><span id="编辑器">编辑器</span></h2><p>本教程将使用 VSCode 编辑器来讲解 Markdown 的语法，VSCode 支持 MacOS 、Windows、Linux 平台，且包含多种主题。</p>
-<p>VSCode 默认集成了 Markdown 文档编辑插件，原生就支持高亮 Markdown 的语法。</p>
-<p>VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器。</p>
-<ul>
-<li><strong>VScode 安装教程：</strong><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/vscode-tutorial.html">https://www.runoob.com/w3cnote/vscode-tutorial.html</a></li>
-<li><strong>VScode 官网地址：</strong><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+		<h3><span id="事务">事务</span></h3><p>事务(Transaction)：是由一组SQL语句组成的一个程序执行单元(Unit)，它需要满足ACID特性</p>
+<h3><span id="acid">ACID</span></h3><ul>
+<li><p>Atomicity：InnoDB中通过undo日志实现了数据库的原子性，通过Undo Log，数据库可以回滚到事务开始的状态；</p>
+</li>
+<li><p>Isolation：通过Undo Log实现MVCC（多版本并发控制），降低读写冲突。</p>
+</li>
+<li><p>Durability：通过Redo Log（一种WAL实现方式）来保证事务在提交后一定能持久化到磁盘中。</p>
+</li>
+<li><p>Consistency：一致性本质上是一种业务层的限制。</p>
+</li>
 </ul>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/91542A7F-900B-4C1F-9FEA-BC418A0047E5.jpeg" alt="img" class="lazyload"></p>
-<p>VSCode 实时预览还需要执行 <strong>Markdown: Open Preview to the Side</strong> 命令来实现。</p>
-<p>在命令窗口输入 <strong>Markdown: Open Preview to the Side</strong> 命令：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/35CB35BB-AC03-4A0D-9C94-AC3B24AFCB30.jpeg" alt="img" class="lazyload"></p>
-<p>最终效果：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/18EE1A99-AF14-4C67-85CD-A7261FD3464B.jpeg" alt="img" class="lazyload"></p>
-<p>如果你需要将 markdown 转为 PDF、图片、HTML 等格式也可以安装对应的插件来实现。</p>
-<p>你也可以使用我们的在线编辑器来测试：<a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/712%E3%80%82">https://c.runoob.com/front-end/712。</a></p>
-<hr>
-<h2><span id="测试实例">测试实例</span></h2><p>接下来的测试中，我们先在 VSCode 下安装 <strong>Markdown Preview Enhanced</strong> 插件来实现更强大的功能。</p>
-<p>点击右侧栏扩展按钮，查找<strong>Markdown Preview Enhanced</strong> 插件，点击安装：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/5D9D9109-C12A-4D81-9E91-3D3FE603DFB8.jpeg" alt="img" class="lazyload"></p>
-<p><strong>安装完成后重启 VSCode。</strong></p>
-<p>在 RUNOOB.md 输入以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># RUNOOB Markdown Test<br>## Hello World!<br></code></pre></td></tr></table></figure>
-
-<p>将该代码格式粘贴到文件 RUNOOB.md 上，效果如下：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/123F0547-C529-4D85-920F-624E65D35DD3.jpeg" alt="img" class="lazyload"></p>
-<p>在预览框中右击鼠标还提供了各种导出功能：</p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.runoob.com/wp-content/uploads/2019/03/3292631D-2230-48B5-A2B9-1E1DA1E522B7.jpeg" alt="img" class="lazyload"></p>
+<h2><span id="发展历史">发展历史</span></h2><p> 数据库发展最初过程中，诞生过3种数据模型，最终关系型模型成为了应用最为广泛的数据库模型。</p>
+<ul>
+<li>网状模型：用有向图表示实体和实体之间的联系的数据结构模型称为网状数据模型。</li>
+<li>层次模型：层次数据模型是用树状&lt;层次&gt;结构来组织数据的数据模型。</li>
+<li>关系模型：使用表格表示实体和实体之间关系的数据模型称之为关系数据模型。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>网状模型</th>
+<th>层次模型</th>
+<th>关系模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>优势</td>
+<td>能直接描述现实世界 存取效率较高</td>
+<td>结构简单 查询效率高 可以提供较好的完整性支持</td>
+<td>实体及实体间的的联系都通过二维表结构表示 可以方便的表示M:N关系 数据访问路径对用户透明</td>
+</tr>
+<tr>
+<td>劣势</td>
+<td>结构复杂 用户不易使用 访问程序设计复杂</td>
+<td>无法表示M:N的关系 插入、删除限制多 遍历子节点必须经过父节点 访问程序设计复杂</td>
+<td>关联查询效率不够高 关系必须规范化</td>
+</tr>
+</tbody></table>
+<h3><span id="sql语言">SQL语言</span></h3><ul>
+<li>语法风格接近自然语言；</li>
+<li>高度非过程化；</li>
+<li>面向集合的操作方式；</li>
+<li>语言简洁，易学易用。</li>
+</ul>
+<h2><span id="关键技术">关键技术</span></h2><h3><span id="sql引擎">SQL引擎</span></h3><ul>
+<li>解析器(Parser)一般为词法分析（Lexical analysis）、语法分析（Syntax analysis）、语义分析（Semantic analyzer）等步骤<ul>
+<li>经过词法分析、语法分析生成语法树，然后对语法树进行合法性校验。</li>
+</ul>
+</li>
+<li>Optimizer：根据Parser产生的语法树，根据规则或者代价产生执行计划树<ul>
+<li>基于规则的优化(<strong>RBO</strong> Rule Base Optimizer)</li>
+<li>基于代价的优化(<strong>CBO</strong> Cost Base Optimizer)</li>
+</ul>
+</li>
+<li>Executor：根据计划树进行执行，常见的执行方式是火山模型。<ul>
+<li>向量化</li>
+<li>编译执行</li>
+</ul>
+</li>
+</ul>
+<h3><span id="存储引擎-innodb">存储引擎 - InnoDB</span></h3><p>In-Memory</p>
+<ul>
+<li>Buffer Pool</li>
+<li>Change Buffer</li>
+<li>Adaptive Hash Index</li>
+<li>Log Buffer</li>
+</ul>
+<p>On-Disk</p>
+<ul>
+<li>System Tablespace(ibdata1)</li>
+<li>General Tablespaces(xxx.ibd)</li>
+<li>Undo Tablespaces(xxx.ibu)</li>
+<li>Temporary Tablespaces(xxx.ibt)</li>
+<li>Redo Log(ib_logfileN)</li>
+</ul>
+<p>存储引擎负责了数据的底层存储、管理和访问工作。各大RDBMS存储引擎的设计都有不少的差异，这里选择MySQL的InnoDB存储引擎来向大家做一个介绍：</p>
+<ul>
+<li>Buffer Pool：存储引擎位于内存中的重要结构，用于缓存数据，减少磁盘IO的开销。</li>
+<li>Page：数据存储的最基本单位，一般为16KB。</li>
+<li>B+u Tree：InnoDB中最常用的索引结构。</li>
+</ul>
+<h3><span id="事务引擎">事务引擎</span></h3><p>事务引擎实现了数据库的ACID能力，这里还是以MySQL的InnoDB为例来介绍数据库内部是通过哪些技术来实现ACID：</p>
+<ul>
+<li>Atomicity 与 Undo Log：InnoDB中通过undo日志实现了数据库的原子性，通过Undo Log，数据库可以回滚到事务开始的状态；</li>
+<li>Isolation 与 锁：通过Undo Log实现MVCC（多版本并发控制），降低读写冲突。</li>
+<li>Durability：通过Redo Log（一种WAL实现方式）来保证事务在提交后一定能持久化到磁盘中。</li>
+<li>Consistency：一致性本质上是一种业务层的限制。</li>
+</ul>
+<h1><span id="实践练习"><strong>实践练习</strong></span></h1><p>春节红包雨挑战</p>
+<h3><span id="大流量-sharding">大流量 - Sharding</span></h3><h4><span id="问题背景">问题背景</span></h4><ul>
+<li>单节点写容易成为瓶颈</li>
+<li>单机数据容量上限</li>
+</ul>
+<h4><span id="解决方案">解决方案</span></h4><ul>
+<li>业务数据进行水平拆分</li>
+<li>代理层进行分片路由</li>
+</ul>
+<h4><span id="实施效果">实施效果</span></h4><ul>
+<li>数据库写入性能线性拓展</li>
+<li>数据库容量线性拓展</li>
+</ul>
+<h3><span id="流量突增-扩容">流量突增 - 扩容</span></h3><h4><span id="问题背景">问题背景</span></h4><ul>
+<li>活动流量上涨</li>
+<li>集群性能不满足要求</li>
+</ul>
+<h4><span id="解决方案">解决方案</span></h4><ul>
+<li>利用DB物理节点数量</li>
+<li>利用影子表进行压测</li>
+</ul>
+<h4><span id="实施效果">实施效果</span></h4><ul>
+<li>数据库集群提供更高的吞吐</li>
+<li>保证集群可以承担预期流量</li>
+</ul>
+<h3><span id="流量突增-代理连接池">流量突增 - 代理连接池</span></h3><h4><span id="问题背景">问题背景</span></h4><ul>
+<li>突增流量导致大量建联</li>
+<li>大量建联导致负载变大，延时上升</li>
+</ul>
+<h4><span id="解决方案">解决方案</span></h4><ul>
+<li>业务侧预热连接池</li>
+<li>代理侧预热连接池</li>
+<li>代理侧支持连接队列</li>
+</ul>
+<h4><span id="实施效果">实施效果</span></h4><ul>
+<li>避免 DB 被突增流量打死</li>
+<li>避免代理和 DB 被大量建联打死</li>
+</ul>
+<h3><span id="稳定性amp可靠性-3az高可用">稳定性&amp;可靠性 - 3AZ高可用</span></h3><p>三机房部署</p>
+<ul>
+<li>机房级别容灾</li>
+<li>机房级别流量调度</li>
+</ul>
+<p>proxy</p>
+<ul>
+<li>读写分离，分库分表</li>
+<li>限流，流量调度</li>
+</ul>
+<p>监控报警</p>
+<p>HA</p>
+<ul>
+<li>High Availability</li>
+<li>实时监控DB运行状态</li>
+<li>宕机快速切换</li>
+</ul>
 
 	</article>
 
 	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/03/18/RDBMS/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;03&#x2F;18&#x2F;RDBMS&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;03&#x2F;18&#x2F;RDBMS&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
 	<div class="kira-post-nav">
 		<nav class="post-nav">
-			      
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			                                          
+			<!-- 在找到当前文章所在的 index -->
+			                                                    
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/03/18/%E5%AD%98%E5%82%A8%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93/"> 存储与数据库</a>
+			</div>
+			                  
 		</nav>
 	</div>
 	
 	<div class="kira-post-meta kira-rainbow">
 		
+			<a class="kirafont icon-appstore-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/DataBase/" rel="tag">DataBase</a>
 		
 	</div>
 	
@@ -375,7 +504,7 @@
 		var gitalk = new Gitalk({
 			clientID: '-id-',
 			clientSecret: '-key-',
-			id: 'Markdown教程',
+			id: 'RDBMS',
 			repo: '-issue repo name-',
 			owner: '-your github username-',
 			admin: '-your github username-',
