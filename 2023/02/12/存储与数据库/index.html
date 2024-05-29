@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 存储与数据库 -  Develop Blogs of YufeiTang</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://clipground.com/images/p5-logo-3.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Develop Blogs of YufeiTang">
+        <img
+			src="/img/favicon.png"
+			alt="Yufei Tang"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/favicon.png" title="Yufei Tang">
+			<img
+				src="/img/favicon.png"
+				alt="Yufei Tang"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>25</div>
+		<div><span>标签</span>9</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3303883421&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/6553841"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Tangyufei233/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/tangyufei233"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/分布式/">
+              分布式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/安全/">
+              安全
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/编程/">
+              编程
+            </a>
+            <span class="category-list-count">14</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/DataBase/" style="font-size: 13.33px;">DataBase</a> <a href="/tags/Golang/" style="font-size: 16.67px;">Golang</a> <a href="/tags/rCore/" style="font-size: 10px;">rCore</a> <a href="/tags/talos/" style="font-size: 13.33px;">talos</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 13.33px;">分布式</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 20px;">后端</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">Yufei Tang</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://i.imgtg.com/2023/03/18/l3XZt.webp"
+				data-sizes="auto"
+				alt="存储与数据库"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>存储与数据库</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年02月12日</a>
+			<a><i class="kirafont icon-edit-fill"></i>970 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 4 分钟</a>
+		</div>
+		<h3><span id="经典案例">经典案例</span></h3><h4><span id="数据持久化">数据持久化</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1839bbc134b84a1eb96ed866347f47f3~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="存在问题">存在问题</span></h4><ol>
+<li>数据库怎样保证<strong>数据不丢</strong></li>
+<li>数据库怎么处理<strong>多人同时修改</strong>的问题？</li>
+<li>为什么用数据库，除了数据库还能存到<strong>别的存储系统</strong>吗？</li>
+<li>数据库只能处理<strong>结构化数据</strong>吗？</li>
+<li>有哪些操作数据库的<strong>方式</strong>，要用什么<strong>编程语言</strong>？</li>
+</ol>
+<h3><span id="存储amp数据库简介">存储&amp;数据库简介</span></h3><h4><span id="系统概览">系统概览</span></h4><p>Q：什么是存储系统？</p>
+<p>A：一个提供读写、控制类接口，能够安全有效地把数据持久化的软件，就可以成为<strong>存储系统</strong></p>
+<h4><span id="系统特点">系统特点</span></h4><ul>
+<li>作为后端软件的底座，<strong>性能敏感</strong></li>
+<li>存储系统的软件架构，<strong>容易受硬件影响</strong></li>
+<li>存储系统<strong>代码，既“简单”又“复杂”</strong></li>
+</ul>
+<h4><span id="存储器层次结构">存储器层次结构</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2083a1f95aa34a18923515440cd9beef~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="数据怎么从应用到存储介质">数据怎么从应用到存储介质</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6ffa7a63aedf49e19b33ff787ae12d4b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<ul>
+<li>[缓存] 很重要，贯穿整个存储体系</li>
+<li>[拷贝] 很昂贵，应该尽量减少</li>
+<li>硬件设备五花八门，需要有抽象统一的接入层</li>
+</ul>
+<h4><span id="raid技术">RAID技术</span></h4><p>Q：单机存储系统怎么做到<strong>高性能&#x2F;高性价比&#x2F;高可靠性</strong>？</p>
+<p>A：R(edundant)A(rray)ofI(nexpensive)D(isks)</p>
+<p>RAID出现的背景：</p>
+<ul>
+<li>单块大容量磁盘的<strong>价格</strong> &gt; 多块小容量磁盘</li>
+<li>单块磁盘的写入<strong>性能</strong> &lt; 多块磁盘的并发写入性能</li>
+<li>单块磁盘的<strong>容错能力</strong>有限，不够安全</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/569b34cbcc3b475da2b974ced9111aed~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br><br>三种RAID技术（不止3种）</p>
+<h3><span id="数据库">数据库</span></h3><h4><span id="关系型和非关系型数据库特点">关系型和非关系型数据库特点</span></h4><p><strong>关系型数据库是存储系统</strong>，但是在存储之外，又发展出<strong>其他能力</strong></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/370369a8f6b04190afc7a60af8915476~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>非关系型数据库也是存储系统，但是一般不要求严格的结构化</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67e4ddc58c284afe80a9641628e5b3a8~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="主流产品剖析">主流产品剖析</span></h3><h4><span id="单机存储">单机存储</span></h4><p>单机存储 &#x3D; 单个计算机节点上的存储软件系统，一般不涉及网络交互</p>
+<h5><span id="本地文件系统">本地文件系统</span></h5><p>Linux经典哲学：<strong>一切皆文件</strong><br>文件系统的管理单元：文件<br><br>文件系统接口：文件系统繁多，如Ext2&#x2F;3&#x2F;4,sysfs,rootfs等，但都遵循VFS的统一抽象接口<br><br>Linux文件系统的两大数据结构：Index Node &amp; Directory Entry</p>
+<h5><span id="key-value">key-value</span></h5><p>常见使用方式：put(k,v) &amp; get(k)<br><br>常见数据结构：LSM-Tree,某种程度上牺牲读性能，追求写入性能<br><br>拳头产品：RocksDB</p>
+<h4><span id="分布式存储">分布式存储</span></h4><h5><span id="hdfs特点">HDFS特点</span></h5><ul>
+<li>支持<strong>海量数据存储</strong></li>
+<li>高容错性</li>
+<li>弱POSIX语义</li>
+<li>使用普通x86服务器，<strong>性价比高</strong></li>
+</ul>
+<h4><span id="ceph">Ceph</span></h4><p>Ceph：开源分布式存储系统里的[万金油]<br>Ceph核心特点：</p>
+<ul>
+<li>一套系统支持对象接口、快接口、文件接口，但是<strong>一切皆对象</strong></li>
+<li>数据写入采用<strong>主备复制模型</strong></li>
+<li>数据分布模型采用<strong>CRUSH</strong>（HASH+权重+随机抽签）算法</li>
+</ul>
+<h4><span id="单机数据库">单机数据库</span></h4><p>单机数据库 &#x3D; 单个计算机节点上的数据库系统<br><br><strong>事务在单机内执行，也可能通过网络交互实现分布式事务</strong></p>
+<h4><span id="关系型数据库">关系型数据库</span></h4><p>商业产品Oracle<strong>称王</strong>,开源产品MySQL &amp; PostgreSQL<strong>称霸</strong></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0dec04e16d9744fbb986bdbac10b881f~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="非关系型数据库">非关系型数据库</span></h4><p>MongoDB、Redis、ElasticSearch三足鼎立</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dba0eee142974ac08f13360ef9fb0232~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7a340a156f5f4cf890a36a1509e5d906~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="elasticsearch使用案例">Elasticsearch使用案例</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/204adc94b542429ca8b42abc39980033~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="分布式数据库">分布式数据库</span></h4><p>单机数据库遇到了哪些问题&amp;挑战，需要引出<strong>分布式架构</strong>来解决？</p>
+<ol>
+<li>容量</li>
+<li>弹性</li>
+<li>性价比<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/159d25c937744346b934e2cfc8c0f5e8~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></li>
+</ol>
+<h3><span id="新技术演进">新技术演进</span></h3><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ec253d5bf66c4d30bcd265e137fba492~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="spdk">SPDK</span></h4><p>Storage Performance Development Kit</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aab83ab5e69741d08b8123fc45fc005b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br><strong>Bypass OS kernal</strong>已经成为一种趋势</p>
+<h4><span id="ai-amp-storage">AI &amp; Storage</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a155da0783f0418a8eeb4b5b877c549b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="高性能硬件">高性能硬件</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8b374bad03a40c8bda125618a9adbef~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h1><span id="课后作业"><strong>课后作业：</strong></span></h1><p>实现一个（分布式）key - value 存储系统<br>要求：</p>
+<ol>
+<li>基于本地文件系统实现，支持常用的put(k,v)、get(k,v)、scan_by_prefix(prefix)接口</li>
+<li>支持存储server独立进程部署，支持跨进程或者网络访问</li>
+<li>IO操作做到低时延</li>
+<li>*可选：支持拓展成分布式架构，多台存储server组成一个分布式key-value存储系统，并保证全局数据一致性</li>
+</ol>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/02/12/%E5%AD%98%E5%82%A8%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;02&#x2F;12&#x2F;存储与数据库&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;02&#x2F;12&#x2F;存储与数据库&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			                                       
+			<!-- 在找到当前文章所在的 index -->
+			                                                
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/02/11/RPC%E6%A1%86%E6%9E%B6/"> RPC框架</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/02/14/RDBMS/"> RDBMS</a>
+			</div>
+			                  
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/DataBase/" rel="tag">DataBase</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

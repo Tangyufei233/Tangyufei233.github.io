@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 分布式定时任务 -  Develop Blogs of YufeiTang</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://clipground.com/images/p5-logo-3.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Develop Blogs of YufeiTang">
+        <img
+			src="/img/favicon.png"
+			alt="Yufei Tang"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/favicon.png" title="Yufei Tang">
+			<img
+				src="/img/favicon.png"
+				alt="Yufei Tang"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>25</div>
+		<div><span>标签</span>9</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3303883421&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/6553841"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Tangyufei233/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/tangyufei233"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/分布式/">
+              分布式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/安全/">
+              安全
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/编程/">
+              编程
+            </a>
+            <span class="category-list-count">14</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/DataBase/" style="font-size: 13.33px;">DataBase</a> <a href="/tags/Golang/" style="font-size: 16.67px;">Golang</a> <a href="/tags/rCore/" style="font-size: 10px;">rCore</a> <a href="/tags/talos/" style="font-size: 13.33px;">talos</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 13.33px;">分布式</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 20px;">后端</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">Yufei Tang</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://i.imgtg.com/2023/03/18/l39xC.jpg"
+				data-sizes="auto"
+				alt="分布式定时任务"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>分布式定时任务</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年02月09日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.4k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 5 分钟</a>
+		</div>
+		<p><strong>抽卡    集齐    开奖</strong></p>
+<p>作为后端开发同学，怎样设计最终开奖环节技术方案？</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2d150ca8ed7b4ce68d371a9c0fb9b68c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>自动化 + 定时执行 + 海量数据 + 高效稳定 &#x3D; 分布式定时任务</p>
+<h3><span id="什么是分布式定时任务">什么是分布式定时任务</span></h3><p>定时任务是指系统为了<strong>自动</strong>完成特定任务，<strong>实时、延期、周期性</strong>完成任务调度的过程。（为了解决自动化和准时）</p>
+<p>分布式定时任务是把分散的、可靠性差的定时任务纳入统一的<strong>平台</strong>，并实现集群管理调度和<strong>分布式部署</strong>的一种定时任务的管理方式。（解决高性能、可靠性、分布式部署）</p>
+<p>按触发时机分类：</p>
+<ul>
+<li>定时任务：特定时间触发，比如今天15:06执行</li>
+<li>延时任务：延时触发，比如10s后执行</li>
+<li>周期任务：固定周期时间，或固定频率周期调度触发，比如每隔5s或者每天12点执行</li>
+</ul>
+<h4><span id="特点">特点</span></h4><ul>
+<li>自动化：全自动完成定时任务的调度和执行</li>
+<li>平台化：基于平台化的思维管控一系列的分布式定时任务</li>
+<li>分布式：在分布式系统环境下运行任务调度，突破单机定时任务的性能瓶颈</li>
+<li>伸缩性：采用集群方式部署，可以随时按需扩缩容</li>
+<li>高可用：单点故障不影响最终任务结果，可以做到故障转移</li>
+</ul>
+<h4><span id="执行方式">执行方式</span></h4><ul>
+<li>单机任务：随时触发一台机器执行任务，适用于计算量小、并发度低的任务</li>
+<li>广播任务：广播到所有机器上执行同一个任务，比如所有机器一起清理日志</li>
+<li>Map任务：一个任务可以分出多个子任务，每个子任务负责一部分计算&#x2F;适用于计算量大，单机无法满足要求的任务</li>
+<li>MapReduce任务：在Map任务的基础上，还可以对所有子任务的结果做汇总计算，适用于计算量大，并且需要对子任务结果做汇总的任务</li>
+</ul>
+<h4><span id="业内定时任务框架">业内定时任务框架</span></h4><ul>
+<li>Xxl-job（开源且免费）</li>
+<li>SchedulerX（阿里云付费使用）</li>
+<li>TCT（仅在腾讯内部使用）</li>
+</ul>
+<h4><span id="分布式定时任务-vs-单机定时任务">分布式定时任务 VS 单机定时任务</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/505d7a5f4e5947d2ad0d20eb8bbb88e8~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="分布式定时任务-vs-大数据处理引擎">分布式定时任务 VS 大数据处理引擎</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2d16b6eda7f48419d2d6b4720183eef~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h2><span id="实现原理">实现原理</span></h2><h4><span id="核心架构">核心架构</span></h4><p>分布式定时任务核心要解决<strong>触发、调度、执行</strong>三个关键问题</p>
+<ul>
+<li>触发器：Trigger，解析任务，生成触发事件</li>
+<li>调度器：Scheduler，分配任务，管理任务生命周期</li>
+<li>执行器：Executor，获取执行任务单元，执行任务逻辑</li>
+</ul>
+<p>除此之外，还需要提供一个控制台（Admin），提供任务管理和干预功能。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/50b6dfe6a4064607bbdcf07bb972b2f0~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><strong>数据流：</strong></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5680440b1b94b6e88349f84b0856dfd~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><strong>功能架构：</strong></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dcbc2aa2b6704c81b25b5cec54499eef~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="控制台">控制台</span></h3><p>基本概念：</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ecbd7e6001e64e28870241503d912a19~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<ul>
+<li><strong>任务</strong>：Job，任务元数据</li>
+<li><strong>任务实例</strong>：JobInstance，周期任务会生成多个任务实例</li>
+<li><strong>任务结果</strong>：JobResult，任务实例运行的结果</li>
+<li><strong>任务历史</strong>：JobHistory，用户可以修改任务信息，任务实例对应的任务元数据可以不同，因而使用任务历史存储</li>
+</ul>
+<p>任务元数据（Job）是用户对任务属性定义，包括任务类型调度时机、执行行为等。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/da00de23180b4b4085e3870b6ccda232~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>任务实例（JobInstance）是一个确定的<code>Job</code>的的一次运行实例</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b5b287aa14443258578e198e73d7293~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="触发器">触发器</span></h3><h4><span id="核心职责">核心职责</span></h4><p>给定一系列任务，解析他们的触发规则，在规定的时间点触发任务的调度</p>
+<p><strong>设计约束</strong></p>
+<ul>
+<li>需支持大量任务</li>
+<li>需支持秒级的调度</li>
+<li>周期任务需要多次执行</li>
+<li>需保证秒级扫描的高性能，并避免资源浪费</li>
+</ul>
+<h4><span id="方案一">方案一</span></h4><p>定期扫描+延时消息（腾讯、字节方案）</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92224f0570584390b7a0eddef8cd30dd~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="方案二">方案二</span></h4><p>时间轮（Quartz 所用方案）</p>
+<p>时间轮是一种高效利用线程资源进行批量化调度的一种调度模型。时间轮是一个存储环形队列，底层采用数组实现，数组中的每个元素可以存放一个定时任务列表</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b4327f89e4d64690b2e870879fee53a7~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/361f573975e9472699465b259d06a5c3~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aaab4771f4464a62ae6fc14f849801bb~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a3c4a692ffed4614a1fb9caa41ceddc6~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc368fcb675a4d70930757dfd91905a0~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b639c400e864cc5b018ce5fd464d6d7~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="高可用">高可用</span></h4><p><strong>核心问题</strong></p>
+<ul>
+<li>不同业务之间，任务的调度相互影响怎么办？</li>
+<li>负责扫描和触发的机器挂了怎么办？</li>
+</ul>
+<p><strong>解法思路</strong></p>
+<ul>
+<li>存储上，不同国别、业务做资源隔离</li>
+<li>运行时，不同国别、业务分开执行</li>
+<li>部署时，采用多机房集群化部署，避免单点故障，通过数据库锁或分布式保证任务只被触发一次</li>
+</ul>
+<h5><span id="问题引出">问题引出</span></h5><p>单Trigger模式（会有单点故障  机器故障时平台崩溃）</p>
+<p>Trigger集群模式（可避免单点故障   需要避免同一任务被多次触发，导致业务紊乱）</p>
+<h5><span id="数据库行锁模式">数据库行锁模式</span></h5><p>在触发调度之前，更新数据库中JobInstance的状态，成功抢锁的才会触发调度</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d7d59e5165548cc80c7bd0654b9b1a3~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="分布式锁模式">分布式锁模式</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c3b09fda5274ee3b7036ac6e4dd4ba8~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="调度器">调度器</span></h3><h4><span id="资源来源">资源来源</span></h4><p><strong>业务提供机器资源</strong></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0a1f66299ce44577bc5cc030e578234a~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><strong>定时任务平台提供机器资源</strong></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a624b03f0ed74d96b6d78a91215d3642~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="节点选择">节点选择</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0a1fdb038c3044a791962c6937be789c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="任务分片">任务分片</span></h4><p>通过任务分片来提高任务执行的效率和资源的利用率<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ce1472c2d0334eb399134611732316dd~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>N个执行器Executor，M个业务数据区段，最好M&gt;&#x3D;N,且M是N的整数倍</p>
+<h4><span id="任务编排">任务编排</span></h4><p>使用有向无环图DAG（Directed Acyclic Graph）进行可视化任务编排</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/acd1367bd4634b7b83c0bb3b2118aec8~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="故障转移">故障转移</span></h4><p>确保部分执行单元任务失败时，任务最终成功</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1cabab2690274401a2edeb86d068186f~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>    分片任务基于一致性hash策略分发任务，当某Executor异常时，调度器会将任务分发到其他Executor</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ecb01c63ae8e4c318a487806ebd9ce68~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="执行器">执行器</span></h3><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45c934bb033f41de8b99726e321e2310~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>基于注册中心，可以做到执行器的弹性扩缩容</p>
+<h2><span id="业务应用">业务应用</span></h2><p>所有需要定时、延时、周期性执行任务的业务场景，都可以考虑分布式定时任务。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aac162c141b2478baa0a18e317005994~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e7f038e7a9b8437ab1035909c3100e53~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ae8eec63bc0469d80c04f20024e44ca~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c18770a563194034b9ce7d04684d6c3b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/02/09/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;02&#x2F;09&#x2F;分布式定时任务&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;02&#x2F;09&#x2F;分布式定时任务&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			      
+			<!-- 先找到与当前文字相同的目录 -->
+			      
+			<!-- 在找到当前文章所在的 index -->
+			    
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/02/02/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA/"> 分布式理论</a>
+			</div>
+			              
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" rel="tag">分布式</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

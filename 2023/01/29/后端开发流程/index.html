@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 后端开发流程 -  Develop Blogs of YufeiTang</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://clipground.com/images/p5-logo-3.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Develop Blogs of YufeiTang">
+        <img
+			src="/img/favicon.png"
+			alt="Yufei Tang"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/favicon.png" title="Yufei Tang">
+			<img
+				src="/img/favicon.png"
+				alt="Yufei Tang"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>25</div>
+		<div><span>标签</span>9</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3303883421&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/6553841"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Tangyufei233/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/tangyufei233"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/分布式/">
+              分布式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/安全/">
+              安全
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/编程/">
+              编程
+            </a>
+            <span class="category-list-count">14</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/DataBase/" style="font-size: 13.33px;">DataBase</a> <a href="/tags/Golang/" style="font-size: 16.67px;">Golang</a> <a href="/tags/rCore/" style="font-size: 10px;">rCore</a> <a href="/tags/talos/" style="font-size: 13.33px;">talos</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 13.33px;">分布式</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 20px;">后端</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">Yufei Tang</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://i.imgtg.com/2023/03/18/l3sMK.jpg"
+				data-sizes="auto"
+				alt="后端开发流程"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>后端开发流程</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年01月29日</a>
+			<a><i class="kirafont icon-edit-fill"></i>721 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+		</div>
+		<h4><span id="为什么要有流程">为什么要有流程？</span></h4><p>我的理解：</p>
+<ol>
+<li>确保质量：通过流程可以确保需求在上线前经过了合适的测试，避免出现质量问题。</li>
+<li>提高效率：通过明确的流程，可以帮助团队节约时间和精力，提高工作效率。</li>
+<li>增强沟通：流程可以帮助团队之间的沟通，确保所有的成员都了解了上线需求的情况。</li>
+<li>提高安全性：流程可以帮助团队确保安全，避免出现安全漏洞。<br></li>
+</ol>
+<h4><span id="流程的各个阶段">流程的各个阶段：</span></h4><ol>
+<li>需求阶段</li>
+<li>开发阶段</li>
+<li>测试阶段</li>
+<li>发布阶段</li>
+<li>运维阶段</li>
+</ol>
+<h4><span id="传统瀑布模型">传统瀑布模型:</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5af3f7807aea4335afcd944b3a0d7383~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="敏捷开发">敏捷开发：</span></h4><p>简单来说就是以更小的团队更快速的进行迭代</p>
+<ul>
+<li>以小团队快速迭代</li>
+<li>团队成员之间合作更加紧密</li>
+<li>以人为本</li>
+</ul>
+<h4><span id="管理框架safe">管理框架SAFe</span></h4><p>The Scaled Agile Framework</p>
+<ul>
+<li>精益产品开发</li>
+<li>敏捷软件开发</li>
+<li>系统思考<br>这套框架为企业中实施敏捷开发提供一套方法论，目前比较大的厂实际接触的就是这套模型<br><br>现代Scrum：</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71b0d0b194814c6db5bf90edb1f47838~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>敏捷教练可以比作队长，产品负责人就是联络指挥部和发布任务的人，其他成员就是特种兵。</p>
+<h4><span id="有哪些流程">有哪些流程</span></h4><h5><span id="需求阶段">需求阶段</span></h5><p>MVP（minimum viable product）思想</p>
+<ul>
+<li>站在用户的角度思考</li>
+<li>收集用户反馈，快速迭代<br>有些事情既重要又紧急，那么就该先去做，不重要不紧急可以最后做。</li>
+</ul>
+<h5><span id="开发阶段">开发阶段</span></h5><p><br>云原生的发展，深刻改变了后端开发的工作<br><br>传统虚拟机–&gt;容器<br><br>单体架构–&gt;微服务<br><br>云原生IDE可以很好解决开发环境搭建的问题</p>
+<h5><span id="团队分支策略">团队分支策略：</span></h5><p><br>有些团队会直接把开发的分支合入master，然后再用某个master上的commit发布<br><br>有些团队会有一个专门的分支叫release分支，大家都把代码合并到release分支，然后测试，发布，之后再把release分支合会master</p>
+<h5><span id="代码规范-自测和文档">代码规范、自测和文档</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/324a762d572145edae5d8c05410cb9cc~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="测试阶段">测试阶段</span></h5><h6><span id="测试金字塔">测试金字塔</span></h6><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc8187c44ea841ba9395de16dd6c6a26~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>越底层的测试颗粒度越细，就需要越多的数量去覆盖所有场景，越顶层的测试越能用少量的case覆盖大多数场景。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0e4b3747a2bd475799a0ded047f68ecc~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="发布阶段">发布阶段</span></h5><h6><span id="各种发布模式">各种发布模式</span></h6><h6><span id="蛮力发布">蛮力发布</span></h6><p>最简单粗暴的<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2786fc83cfef4d08ad441bd6aa4e5949~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h6><span id="金丝雀发布">金丝雀发布</span></h6><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/022d8bfe70904930b8f46a9d7cb5f65d~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h6><span id="滚动发布">滚动发布</span></h6><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/48fd3bb9bdbd4152a7d7f83b61ea2f04~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h6><span id="蓝绿发布">蓝绿发布</span></h6><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/038c53d894bd42729aafecc61877293d~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h6><span id="红黑发布">红黑发布</span></h6><p>基于蓝绿发布</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cbb93293a90649b3b1e9b95373db7e69~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>发布模式还不止这几种</p>
+<h5><span id="运维阶段">运维阶段</span></h5><p>观察监控和日志</p>
+<h4><span id="流程怎样优化">流程怎样优化</span></h4><p>从需求到上线全流程自动化，就同时提高了质量和效率。</p>
+<h5><span id="devops">DevOps</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/da247178b38349afb8a7f1e89c246e84~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>从需求开始，写代码，编译，测试，发布，运维，监控，形成一个闭环。<br><br>效率竖井：</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e0204e255cd54b70a080d510c3a03534~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="全流程自动化">全流程自动化</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2c88711f9b224c79b83c4ebbebdfd4dc~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>可以把价值流，作为全流程的指标。</p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/01/29/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;01&#x2F;29&#x2F;后端开发流程&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;01&#x2F;29&#x2F;后端开发流程&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			                     
+			<!-- 在找到当前文章所在的 index -->
+			                        
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/01/20/Go%E4%B8%89%E4%BB%B6%E5%A5%97/"> Go三件套</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/01/31/%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/"> 规则引擎</a>
+			</div>
+			                                                            
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

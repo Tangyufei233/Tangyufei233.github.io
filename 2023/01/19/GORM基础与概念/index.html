@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> GORM基础与概念 -  Develop Blogs of YufeiTang</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://clipground.com/images/p5-logo-3.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Develop Blogs of YufeiTang">
+        <img
+			src="/img/favicon.png"
+			alt="Yufei Tang"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/favicon.png" title="Yufei Tang">
+			<img
+				src="/img/favicon.png"
+				alt="Yufei Tang"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>25</div>
+		<div><span>标签</span>9</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3303883421&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/6553841"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Tangyufei233/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/tangyufei233"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/分布式/">
+              分布式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/安全/">
+              安全
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/编程/">
+              编程
+            </a>
+            <span class="category-list-count">14</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/DataBase/" style="font-size: 13.33px;">DataBase</a> <a href="/tags/Golang/" style="font-size: 16.67px;">Golang</a> <a href="/tags/rCore/" style="font-size: 10px;">rCore</a> <a href="/tags/talos/" style="font-size: 13.33px;">talos</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 13.33px;">分布式</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 20px;">后端</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">Yufei Tang</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://i.imgtg.com/2023/03/18/l3V7a.webp"
+				data-sizes="auto"
+				alt="GORM基础与概念"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>GORM基础与概念</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年01月19日</a>
+			<a><i class="kirafont icon-edit-fill"></i>695 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 3 分钟</a>
+		</div>
+		<h4><span id="databasex2fsql包">database&#x2F;sql包</span></h4><h5><span id="导入">导入</span></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">import (<br>    &quot;database/sql&quot;<br>    _ &quot;github.com/go-sql-driver/mysql&quot;<br>)<br></code></pre></td></tr></table></figure>
+<h5><span id="基本用法">基本用法</span></h5><p>连接DB：    sql.Open()<br><br>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">db,err :=sql:Open(&quot;mysql&quot;,&quot;user:password@tcp(127.0.0.1:3306)/helo&quot;)<br></code></pre></td></tr></table></figure>
+<p><code>sql.Open</code>的第一个参数是driver名称，第二个参数是driver连接数据库的信息，各个driver可能不同。DB不是连接，并且只有当需要使用时才会创建连接<br><br> 读取DB:    db.Query()<br><br>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">rows,err := db.Query(&quot;select id,anme from users where id = ?&quot;,1)<br></code></pre></td></tr></table></figure>
+<p><code>db.Query()</code>表示向数据库发送一个query</p>
+<h5><span id="设计原理">设计原理</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/76afb49805e34e04880195390e6b4f2d~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="gorm基础">GORM基础</span></h4><h5><span id="模型定义">模型定义</span></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">type User struct &#123;   <br>ID           uint   <br>Name         string   <br>Email        *string   <br>Age          uint8   <br>Birthday     *time.Time   <br>MemberNumber sql.NullString   <br>ActivatedAt  sql.NullTime   <br>CreatedAt    time.Time   <br>UpdatedAt    time.Time <br>&#125;<br></code></pre></td></tr></table></figure>
+<h5><span id="惯例约定">惯例约定</span></h5><p><strong>约定优于配置</strong></p>
+<ul>
+<li>表名为struct name的snake_cases复数格式</li>
+<li>字段名为field name的snake_case单数格式</li>
+<li>ID&#x2F;id字段为主键，如果为数字，则为自增主键</li>
+<li>CreatedAt字段，创建时，保存当前时间</li>
+<li>UpdateAt字段，创建、更新时，保存当前时间</li>
+<li>gorm.DeletedAt字段，默认开启soft delete模式</li>
+</ul>
+<h5><span id="创建记录">创建记录</span></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">user := User&#123;Name: &quot;Jinzhu&quot;, Age: 18, Birthday: time.Now()&#125;<br><br>result := db.Create(&amp;user) // pass pointer of data to Create<br><br>user.ID             // returns inserted data&#x27;s primary key<br>result.Error        // returns error<br>result.RowsAffected // returns inserted records count<br></code></pre></td></tr></table></figure>
+<h5><span id="使用所选字段创建记录">使用所选字段创建记录</span></h5><p>创建一条记录并为指定的字段赋值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">db.Select(&quot;Name&quot;, &quot;Age&quot;, &quot;CreatedAt&quot;).Create(&amp;user) // INSERT INTO `users` (`name`,`age`,`created_at`) VALUES (&quot;jinzhu&quot;, 18, &quot;2020-07-04 11:05:21.775&quot;) <br></code></pre></td></tr></table></figure>
+<p>创建一个记录，忽略传递给省略的字段的值<br>db.Omit(“Name”, “Age”, “CreatedAt”).Create(&amp;user)<br>&#x2F;&#x2F; INSERT INTO <code>users</code> (<code>birthday</code>,<code>updated_at</code>) VALUES (“2020-01-01 00:00:00.000”, “2020-07-04 11:05:21.775”)</p>
+<h5><span id="检索单个对象">检索单个对象</span></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">// Get the first record ordered by primary key<br>db.First(&amp;user)<br>// SELECT * FROM users ORDER BY id LIMIT 1;<br><br>// Get one record, no specified order<br>db.Take(&amp;user)<br>// SELECT * FROM users LIMIT 1;<br><br>// Get last record, ordered by primary key desc<br>db.Last(&amp;user)<br>// SELECT * FROM users ORDER BY id DESC LIMIT 1;<br><br>result := db.First(&amp;user)<br>result.RowsAffected // returns count of records found<br>result.Error        // returns error or nil<br><br>// check error ErrRecordNotFound<br>errors.Is(result.Error, gorm.ErrRecordNotFound)<br></code></pre></td></tr></table></figure>
+<h5><span id="更新单列">更新单列</span></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">// Update with conditions  <br>db.Model(&amp;User&#123;&#125;).Where(&quot;active = ?&quot;, true).Update(&quot;name&quot;, &quot;hello&quot;)  <br>// UPDATE users SET name=&#x27;hello&#x27;, updated_at=&#x27;2013-11-17 21:34:10&#x27; WHERE active=true;  <br>  <br>// User&#x27;s ID is `111`:  <br>db.Model(&amp;user).Update(&quot;name&quot;, &quot;hello&quot;)  <br>// UPDATE users SET name=&#x27;hello&#x27;, updated_at=&#x27;2013-11-17 21:34:10&#x27; WHERE id=111;  <br>  <br>// Update with conditions and model value  <br>db.Model(&amp;user).Where(&quot;active = ?&quot;, true).Update(&quot;name&quot;, &quot;hello&quot;)  <br>// UPDATE users SET name=&#x27;hello&#x27;, updated_at=&#x27;2013-11-17 21:34:10&#x27; WHERE id=111 AND active=true;<br></code></pre></td></tr></table></figure>
+<h5><span id="删除一个记录">删除一个记录</span></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">// Email&#x27;s ID is `10` db.Delete(&amp;email) // DELETE from emails where id = 10;  // Delete with additional conditions db.Where(&quot;name = ?&quot;, &quot;jinzhu&quot;).Delete(&amp;email) // DELETE from emails where id = 10 AND name = &quot;jinzhu&quot;; <br></code></pre></td></tr></table></figure>
+<h5><span id="sql是怎样生成的">SQL是怎样生成的</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19c33f56dcab4990916e005029b72db9~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8375a51e925541e8b1e912bdc1c492cd~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51add1b856794deaa145ed15da052c6b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/58c1249adc9a467995543743b06325c6~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="插件是怎样工作的">插件是怎样工作的</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb47cb339df94e56a85ea94f57313267~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a846db287bfa4dd9b23f0262d8b09850~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7d09f29ef40e4e59bd70993479941ad0~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c54de058b6443bfbabf7b10947f02a9~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/355fd0feeb9a4d4c9ace12ee3ac1899b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="connpool是什么">ConnPool是什么</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e3c7ba69c0154b5cbc3aa0ed23c56d44~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/118aaf5f0f1c4483a70332b2d986ab06~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="dialector是什么">Dialector是什么</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b977660ad5334153a677c3a5d52fcf3c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/01/19/GORM%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%A6%82%E5%BF%B5/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;01&#x2F;19&#x2F;GORM基础与概念&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;01&#x2F;19&#x2F;GORM基础与概念&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			               
+			<!-- 在找到当前文章所在的 index -->
+			                
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/01/18/Go%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"> Go自动内存管理</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/01/20/Go%E4%B8%89%E4%BB%B6%E5%A5%97/"> Go三件套</a>
+			</div>
+			                                                                          
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/Golang/" rel="tag">Golang</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

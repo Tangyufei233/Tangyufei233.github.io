@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 消息队列 -  Develop Blogs of YufeiTang</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://clipground.com/images/p5-logo-3.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Develop Blogs of YufeiTang">
+        <img
+			src="/img/favicon.png"
+			alt="Yufei Tang"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/favicon.png" title="Yufei Tang">
+			<img
+				src="/img/favicon.png"
+				alt="Yufei Tang"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>25</div>
+		<div><span>标签</span>9</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3303883421&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/6553841"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Tangyufei233/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/tangyufei233"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/分布式/">
+              分布式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/安全/">
+              安全
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/编程/">
+              编程
+            </a>
+            <span class="category-list-count">14</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/DataBase/" style="font-size: 13.33px;">DataBase</a> <a href="/tags/Golang/" style="font-size: 16.67px;">Golang</a> <a href="/tags/rCore/" style="font-size: 10px;">rCore</a> <a href="/tags/talos/" style="font-size: 13.33px;">talos</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 13.33px;">分布式</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 20px;">后端</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">Yufei Tang</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://i.imgtg.com/2023/03/18/l32li.jpg"
+				data-sizes="auto"
+				alt="消息队列"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>消息队列</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年02月10日</a>
+			<a><i class="kirafont icon-edit-fill"></i>2.3k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 9 分钟</a>
+		</div>
+		<h3><span id="四个场景如何解决">四个场景，如何解决？</span></h3><ol>
+<li>系统崩溃</li>
+</ol>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dbf548967c724411b943ecf3074ee706~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>2. 服务处理能力有限</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/149563ef940842aab08c53c1a6d03da1~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>3. 链路耗时长尾</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f75ffd625da345bda99d26535103232f~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>4. 日志如何处理</p>
+<h3><span id="解决方案">解决方案</span></h3><ol>
+<li>系统崩溃（解耦）</li>
+</ol>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/451366f0f2c7459485998c890447f2e4~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<ol start="2">
+<li>服务处理能力有限（削峰）</li>
+</ol>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3afce22b552944cca2228459402e64de~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<ol start="3">
+<li>链路耗时长尾（异步）</li>
+</ol>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/18eff7eec70141db8591d00efeba1bae~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<ol start="4">
+<li>日志处理</li>
+</ol>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/817ed46b1ea64158baf2101a56e8743f~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="什么是消息队列">什么是消息队列？</span></h3><p>消息队列（MQ），指保存消息的一个容器，本质是个队列，但这个队列呢，需要支持<strong>高吞吐，高并发，并且高可用</strong>。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7052ca7789e84b66b54d718f5d7d9edb~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="业界消息队列对比">业界消息队列对比</span></h3><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c5926a6653cd483cbfeffa0cedd3be1c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="kafka">Kafka</span></h3><h4><span id="使用场景">使用场景</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f00abdae272c4bcca4e2f565a19a4fb4~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="如何使用-kafka">如何使用 Kafka</span></h4><p>第一步：首先需要创建一个Kafka集群<br><br>第二步：需要在这个集群中创建一个Topic，并且设置好分片数量<br><br>第三步：引入对应语言的SDK，配置好集群和Topic等参数，初始化一个生产者，调用Send方法，将你的Hello World发送出去<br><br>第四步：引入对应语言的SDK，配置好集群和Topic等参数，初始化一个消费者，调用Poll方法，你将收到你刚刚发送的Hello World</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6b2af31cd45461ebb97b743894e7116~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="基本概念">基本概念</span></h4><ul>
+<li>Topic：Kakfa中的逻辑队列，可以理解成每一个不同的业务场景就是一个不同的topic，对于这个业务来说，所有的数据都存储在这个topic中</li>
+<li>Cluster：Kafka的物理集群，每个集群中可以新建多个不同的topic</li>
+<li>Producer：顾名思义，也就是消息的生产端，负责将业务消息发送到Topic当中</li>
+<li>Consumer：消息的消费端，负责消费已经发送到topic中的消息</li>
+<li>Partition：通常topic会有多个分片，不同分片直接消息是可以并发来处理的，这样提高单个Topic的吞吐</li>
+</ul>
+<h5><span id="offset">Offset</span></h5><p>Offset：消息在 partition 内的相对位置信息，可以理解为唯一ID，在 partition 内部严格递增。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2eeb915e8c2e416ea68644638a77750b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="replica">Replica</span></h5><p>每个分片有多个Replica，Leader Replica 将从 ISR 中选出。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51908400364e4fbab9dd04f0a24a5378~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="数据复制">数据复制</span></h4><p>下面这幅图代表着Kafka中副本的分布图。途中Broker代表每一个Kafka的节点，所有的Broker节点最终组成了一个集群。整个图表示，图中整个集群，包含了4个Broker机器节点，集群有两个Topic，分别是Topic1和Topic2，Topic1有两个分片，Topic2有1个分片，每个分片都是三副本的状态。这里中间有一个Broker同时也扮演了Controller的角色，Controller是整个集群的大脑，负责对副本和Broker进行分配</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/46c1d7f4ced64f369b27eb5436bb7b94~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="kafka-架构">Kafka 架构</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6689d7808b474daabde411d86b7dfa3b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>而在集群的基础上，还有一个模块是ZooKeeper，这个模块其实是存储了集群的元数据信息，比如副本的分配信息等等，Controller计算好的方案都会放到这个地方</p>
+<h4><span id="帮助kafka提高吞吐或稳定性的功能">帮助Kafka提高吞吐或稳定性的功能</span></h4><ul>
+<li>Producer：批量发送、数据压缩</li>
+<li>Broker：顺序写，消息索引，零拷贝</li>
+<li>Consumer：Rebalance</li>
+</ul>
+<h4><span id="kafka在使用中遇到问题">Kafka在使用中遇到问题</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8b1645c28ca1441da036145d4b4a0463~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>通过前面的介绍我们可以知道，对于Kafka来说，每一个Broker上都有不同topic分区的不同副本，而每一个副本，会将其数据存储到该Kafka节点上面，对于不同的节点之间，通过副本直接的数据复制，来保证数据的最终一致性，与集群的高可用。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d409ec2ac7b84164b7b0a7c1ac513afe~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>如果我们对一个机器进行重启，首先，我们会关闭一个Broker，此时如果该Broker上存在副本的Leader，那么该副本将发生leader切换，切换到其他节点上面并且在ISR中的Follower副本，可以看到图中是切换到了第二个Broker上面<br>而此时，因为数据在不断的写入，对于刚刚关闭重启的Broker来说，和新Leader之间一定会存在数据的滞后，此时这个Broker会追赶数据，重新加入到ISR当中<br>当数据追赶完成之后，我们需要回切leader，这一步叫做prefer leader，这一步的目的是为了避免，在一个集群长期运行后，所有的leader都分布在少数节点上，导致数据的不均衡<br>通过上面的一个流程分析，我们可以发现对于一个Broker的重启来说，需要进行数据复制，所以时间成本会比较大，比如一个节点重启需要10分钟，一个集群有1000个节点，如果该集群需要重启升级，则需要10000分钟，那差不多就是一个星期，这样的时间成本是非常大的。<br>有同学可能会说，老师可以不可以并发多台重启呀，问的好，不可以。为什么呢，在一个两副本的集群中，重启了两台机器，对某一分片来讲，可能两个分片都在这台机器上面，则会导致该集群处于不可用的状态。这是更不能接受的。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/211e82473ad840f0b79e4f8f323cd33e~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>如果是替换，和刚刚的重启有什么区别，其实替换，本质上来讲就是一个需要追更多数据的重启操作，因为正常重启只需要追一小部分，而替换，则是需要复制整个leader的数据，时间会更长<br>扩容呢，当分片分配到新的机器上以后，也是相当于要从0开始复制一些新的副本<br>而缩容，缩容节点上面的分片也会分片到集群中剩余节点上面，分配过去的副本也会从0开始去复制数据<br>以上三个操作均有数据复制所带来的时间成本问题，所以对于Kafka来说，运维操作所带来的时间成本是不容忽视的</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/42ad0a5d18d34f0b97a4ed657cf1f0f7~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p>总结：</p>
+<ol>
+<li>运维成本高</li>
+<li>对于负载不均衡的场景，解决方案复杂</li>
+<li>没有自己的缓存，完全依赖 Page Cache</li>
+<li>Controller 和 Coordinator 和 Broker 在同一进程中，大量 IO 会造成其性能下降</li>
+</ol>
+<h3><span id="bmq">BMQ</span></h3><p>兼容 Kafka 协议，存算分离，云原生消息队列</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90fd5c5888d54ea2bf4bbf983d0b63c6~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload">Producer -&gt; Consumer -&gt; Proxy -&gt; Broker<br>-&gt; HDFS -&gt; Controller -&gt; Coordinator -&gt; Meta<br>着重强调一下Proxy和Broker无状态</p>
+<h4><span id="运维操作对比">运维操作对比</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b9d4815c1bf4df0ab8fc2183d6e3489~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br><strong>薄纱了</strong></p>
+<h4><span id="hdfs-写文件流程">HDFS 写文件流程</span></h4><p>随机选择一定数量的 DataNode 进行写入</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/24ca7038a8b04eae86e1b79e352ce4d2~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>通过前面的介绍，我们知道了，同一个副本是由多个segment组成，我们来看看BMQ对于单个文件写入的机制是怎么样的，首先客户端写入前会选择一定数量的DataNode，这个数量是副本数，然后将一个文件写入到这三个节点上，切换到下一个segment之后，又会重新选择三个节点进行写入。这样一来，对于单个副本的所有segment来讲，会随机的分配到分布式文件系统的整个集群中</p>
+<h4><span id="bmq文件结构">BMQ文件结构</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dba93ff68b2d4abcbde2ad353a0adc03~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>对于Kafka分片数据的写入，是通过先在Leader上面写好文件，然后同步到Follower上，所以对于同一个副本的所有Segment都在同一台机器上面。就会存在之前我们所说到的单分片过大导致负载不均衡的问题，但在BMQ集群中，因为对于单个副本来讲，是随机分配到不同的节点上面的，因此不会存在Kafka的负载不均问题</p>
+<h4><span id="broker-partition-状态机">Broker-Partition 状态机</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e089e328ca9474daafb642163419ca9~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>保证对于任意分片在同一时刻只能在一个 Broker上存活<br><br>首先，Controller做好分片的分配之后，如果在该Broker分配到了Broker，首先会start这个分片，然后进入Recover状态，这个状态主要有两个目的获取分片写入权利，也就是说，对于hdfs来讲，只会允许我一个分片进行写入，只有拿到这个权利的分片我才能写入，第二一个目的是如果上次分片是异常中断的，没有进行save checkpoint，这里会重新进行一次save checkpoint，然后就进入了正常的写流程状态，创建文件，写入数据，到一定大小之后又开始建立新的文件进行写入。</p>
+<h4><span id="broker-写文件流程">Broker-写文件流程</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ea2e21799590495a94d56d3525aee520~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>数据校验：CRC , 参数是否合法<br>校验完成后，会把数据放入Buffer中<br>通过一个异步的Write Thread线程将数据最终写入到底层的存储系统当中</p>
+<h4><span id="proxy">Proxy</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e08185a6d014a94a50ed3790945df76~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3cf05bc5974a44259a5a94e7bf64ef5b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="bmq-高级特性">BMQ-高级特性</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2971c1e787764999b4f468c46280ed9d~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="databus">Databus</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0c203c98ac9d4b58bcd2a9e695521e51~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="mirror">Mirror</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1fa12d2b20a64f5693eb9f79078ac118~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="index">Index</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5cbe56a925b045b0bc4aa3a0b9044b8f~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="parquet">Parquet</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1baa17b87f8b4e45875ae9f594950f42~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/313f3851cb75412a902b37efa23a13e0~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64e984cdf788489ba92aec7a19f562ca~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h3><span id="rocketmq">RocketMQ</span></h3><h4><span id="使用场景">使用场景</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a2c48a11dfdf486798ef8bed8c15897b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="基本概念">基本概念</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e31cd2e324064e82a8448849a090671b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8837838a959f47d985b02dd644d29aea~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload">Producer，Consumer，Broker这三个部分，Kafka和RocketMQ是一样的，而Kafka中的Partition概念在这里叫做ConsumerQueue</p>
+<h4><span id="存储模型">存储模型</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15a8d8c205a743b8a9e466028598abf7~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>对于一个Broker来说所有的消息的会append到一个CommitLog上面，然后按照不同的Queue，重新Dispatch到不同的Consumer中，这样Consumer就可以按照Queue进行拉取消费，但需要注意的是，这里的ConsumerQueue所存储的并不是真实的数据，真实的数据其实只存在CommitLog中，这里存的仅仅是这个Queue所有消息在CommitLog上面的位置，相当于是这个Queue的一个密集索引</p>
+<h4><span id="高级特性">高级特性</span></h4><h5><span id="事务场景">事务场景</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/14a7de15111c4a828ef6e4718cebd401~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="事务消息">事务消息</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c5eec1f8698348c18b14894b23bed09a~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="延迟发送">延迟发送</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad78d8b041c1434dabd2b5374b6f75ed~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2f6588c4dc6543e1b4575848406f08fe~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="延迟消息">延迟消息</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f71be80a8e584154b9afd0fc74e607da~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="消费重试和死信队列">消费重试和死信队列</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/014abe97f0834fe99a43bfea24ae94d1~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/02/10/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;02&#x2F;10&#x2F;消息队列&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;02&#x2F;10&#x2F;消息队列&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			                                 
+			<!-- 在找到当前文章所在的 index -->
+			                                        
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/02/04/%E5%88%9D%E8%AF%86%E5%BE%AE%E6%9C%8D%E5%8A%A1/"> 初识微服务</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/02/11/RPC%E6%A1%86%E6%9E%B6/"> RPC框架</a>
+			</div>
+			                                
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

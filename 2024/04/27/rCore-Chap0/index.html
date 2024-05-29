@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> rCore_Chap0 -  Develop Blogs of YufeiTang</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://clipground.com/images/p5-logo-3.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Develop Blogs of YufeiTang">
+        <img
+			src="/img/favicon.png"
+			alt="Yufei Tang"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/favicon.png" title="Yufei Tang">
+			<img
+				src="/img/favicon.png"
+				alt="Yufei Tang"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>25</div>
+		<div><span>标签</span>9</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3303883421&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/6553841"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Tangyufei233/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/tangyufei233"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/分布式/">
+              分布式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/安全/">
+              安全
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/编程/">
+              编程
+            </a>
+            <span class="category-list-count">14</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/DataBase/" style="font-size: 13.33px;">DataBase</a> <a href="/tags/Golang/" style="font-size: 16.67px;">Golang</a> <a href="/tags/rCore/" style="font-size: 10px;">rCore</a> <a href="/tags/talos/" style="font-size: 13.33px;">talos</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 13.33px;">分布式</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 20px;">后端</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">Yufei Tang</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg"
+				data-sizes="auto"
+				alt="rCore_Chap0"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>rCore_Chap0</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2024年04月27日</a>
+			<a><i class="kirafont icon-edit-fill"></i>2.4k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 9 分钟</a>
+		</div>
+		<h1><span id="introduction">Introduction</span></h1><h2><span id="如何基于本书学习操作系统">如何基于本书学习操作系统</span></h2><h3><span id="前期准备">前期准备</span></h3><p>计算机科学基础 : Computer Organization 、 Data Structure and Algorithm 、 Programming Languages 、 Software Development Environment . </p>
+<blockquote>
+<p>了解计算机的基本原理，特别是RISC-V处理器的指令集和部分特权操作；</p>
+<p>掌握基本的数据结构和算法.</p>
+<p>实验的过程中，掌握系统级的高级编程语言和汇编语言。</p>
+<p>掌握操作系统的开发与实验环境，需要能够通过Linux的命令行界面使用各种开发工具和辅助工具，而掌握基于图形界面或字符界面的IDE集成开发环境，可以提高分析操作系统源码，简化操作系统的开发与调试过程。</p>
+</blockquote>
+<h3><span id="目标与步骤">目标与步骤</span></h3><p>以 RISC-V 为底层硬件基础 ， 根据上层应用从小到大的需求，按照OS的发展，逐步讲解设计实现“从简单到复杂”的多个小 OS 。 </p>
+<blockquote>
+<p><strong>如何学习操作系统？</strong></p>
+<ul>
+<li>掌握基本原理为主，了解具体实现为辅（一般学习）<ul>
+<li>理解式学习方式：逐章阅读与实践，阅读分析应用，并通过分析应用与OS的动态执行过程，掌握OS原理。</li>
+</ul>
+</li>
+<li>掌握操作系统实现和原理为主（深入学习）<ul>
+<li>构造式学习：在理解式学习方式基础上，进一步分析源码，逐步深入了解每个OS的内部增量实现，并且参考并基于这些小OS，扩展部分OS功能，通过测试用例，从而同时掌握操作系统实现和原理。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3><span id="编程语言与硬件环境">编程语言与硬件环境</span></h3><p><strong>目前常见的操作系统内核都是基于 C 语言的，为何要推荐 Rust 语言？</strong></p>
+<p>历史原因 :</p>
+<p>​		C 语言就是为写 UNIX 而诞生的。Dennis Ritchie 和 KenThompson 没有期望设计一种新语言能帮助高效地开发复杂与并发的操作系统逻辑(面向未来)，而是希望用一种简洁的方式来代替难以使用的汇编语言抽象出计算机的行为，便于编写控制计算机硬件的操作系统.</p>
+<blockquote>
+<p>​		个人看来，操作系统仍处于前期发展阶段。 在Unix诞生的初期，C 就是最高级、最先进的编程语言。随后无论 DOS、 WindowsNT 、 Mach 等诞生的时候， C 与 C++ 是最合适的高级编程语言。但此时非彼时，编程语言的世界日新月异。目前没有比 Rust 更合适的系统编程语言用于开发操作系统。 因为商业化操作系统需要所使用的技术得到成熟的验证， 所以要见到 Rust 开发的商业化操作系统仍然需要时间。期待通过 Rust 加持的下一代的操作系统的雏形。</p>
+</blockquote>
+<p>特性原因 :</p>
+<p>​		C 语言的指针既是天使又是魔鬼。它灵活且易于使用，但语言本身几乎不保证安全性，且缺少有效的并发支持。这导致内存和并发漏洞成为当前基于 C 语言的主流操作系统的噩梦。</p>
+<p>​		Rust 语言具有与 C 一样的硬件控制能力，且大大强化了安全编程和抽象编程能力。从某种角度上看，新出现的 Rust 语言的核心目标是解决 C 的短板。所以用 Rust 写 OS 具有很好的开发和运行体验。</p>
+<p>​		用 Rust 写 OS 的代价仅仅是学会用 Rust 编程。</p>
+<p><strong>目前常见的指令集架构是 x86 和 ARM ，为何要推荐 RISC-V ？</strong></p>
+<p>x86 和 ARM 特性:</p>
+<ul>
+<li>目前为止最常见的指令集架构是 x86 和 ARM ，它们已广泛应用在服务器、台式机、移动终端和很多嵌入式系统中。由于它们的通用性和向后兼容性需求，需要支持非常多（包括几十年前实现）的软件系统和应用需求，导致这些指令集架构越来越复杂。</li>
+<li>x86 后向兼容的策略确保了它在桌面和服务器领域的江湖地位，但导致其丢不掉很多已经比较过时的硬件设计，让操作系统通过冗余的代码来适配各种新老硬件特征。</li>
+<li>x86 和 ARM 在商业上都很成功，其广泛使用使得其 CPU 硬件逻辑越来越复杂，且不够开放，不能改变，不是开源的，难以让感兴趣探索硬件的学生了解硬件细节，在某种程度上让CPU成为了一个黑盒子，并使得操作系统与硬件的交互变得不那么透明，增加了学习操作系统的负担。</li>
+</ul>
+<p>RISC-V特性 :</p>
+<ul>
+<li>从某种角度上看，适应未来的 AIoT （人工智能物联网, AI + IoT）场景，保证基本功能，提供可配置的扩展功能。开源特征使得学生都可以深入CPU的运行细节，甚至可以方便地设计一个 RISC-V CPU。从而可帮助学生深入了解操作系统与硬件的协同执行过程。</li>
+<li>代价仅仅是你了解 RISC-V 的 Supervisor 特权模式，知道 OS 在 Supervisor 特权模式下的控制能力。</li>
+</ul>
+<h1><span id="what-is-operating-system">What is Operating System ?</span></h1><h2><span id="站在一万米的代码空间维度看">站在一万米的代码空间维度看</span></h2><p>一种软件 : 帮助用户和应用使用和管理资源。（可能对最终用户不可见）</p>
+<p>讨论集中在通用操作系统上，因为需要的技术是嵌入式系统所需技术的超集。</p>
+<h3><span id="系统软件">系统软件</span></h3><p>​		系统软件为计算机系统提供基本功能，在系统范围内使用。包括<strong>操作系统内核、驱动程序、工具软件、用户界面、软件库等</strong>。</p>
+<h3><span id="执行环境">执行环境</span></h3><p>​		应用角度看,常见的应用运行在由硬件、OS内核、运行时(runtime)库、图形界面支持库等包起来的一个 <strong>执行环境(Execution Environment)</strong></p>
+<p>​		执行环境提供了运行应用软所需的运行时服务，包括<strong>内存管理、文件系统访问、网络连接等</strong>，这些服务大部分是由操作系统来提供的。应用程序只需根据与系统软件约定好的**应用程序二进制接口 (ABI, Application Binary Interface) **来请求执行环境提供的各种服务或功能，从而完成应用程序自己的功能。</p>
+<p>​		基于这样的观察，可以把操作系统的定义简化为 : <strong>应用程序的软件执行环境</strong> 。从这个角度出发，操作系统可以包括运行时库、图形界面支持库等系统软件。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://rcore-os.cn/rCore-Tutorial-Book-v3/_images/EE.png" alt="../_images/EE.png" class="lazyload"></p>
+<h3><span id="操作系统的定义与组成">操作系统的定义与组成</span></h3><p>一万米高空看，OS干的事两件: </p>
+<ol>
+<li>向下管理并控制计算机硬件(Hardware) 和各种外设(I&#x2F;O Device)</li>
+<li>向上管理应用软件并提供服务。</li>
+</ol>
+<p>进一步定义： 操作系统是一种系统软件，主要功能是向下管理CPU、内存和各种外设等硬件资源，并形成软件执行环境来向上管理和服务应用软件。</p>
+<p><a target="_blank" rel="noopener" href="https://rcore-os.cn/rCore-Tutorial-Book-v3/_images/computer-hw-sw.png"><img data-fancybox="gallery" data-sizes="auto" data-src="https://rcore-os.cn/rCore-Tutorial-Book-v3/_images/computer-hw-sw.png" alt="../_images/computer-hw-sw.png" class="lazyload"></a></p>
+<p> Android 应用运行在 ARM 处理器上的 Android 执行环境中；Office 应用运行在 x86-64 处理器上的 Windows 执行环境中；…… 而在一些嵌入式环境中，操作系统以运行时库的形式与应用程序紧密结合在一起，形成一个可在嵌入式硬件上执行的嵌入式应用。</p>
+<p>所以，在不同的应用场景下，操作系统的边界也是不同的，我们可以把运行时库、图形界面支持库等这些可支持不同应用的系统软件 (System Software) 也看成是操作系统的一部分。</p>
+<p>在一般情况下，操作系统的主要组成包括：</p>
+<ol>
+<li>操作系统内核：操作系统的核心部分，负责控制计算机的硬件资源并为用户和应用程序提供服务。</li>
+<li>系统工具和软件库：为操作系统提供基本功能的软件，包括工具软件和系统软件库等。</li>
+<li>用户接口：是操作系统的外壳，是用户与操作系统交互的方式。用户接口包括图形用户界面（GUI）和命令行界面（CLI）等。</li>
+</ol>
+<p>操作系统内核主要组成部分包括：</p>
+<ol>
+<li>进程&#x2F;线程管理</li>
+<li>内存管理</li>
+<li>文件系统：内核提供文件系统接口，负责管理存储设备上的文件和目录，并允许应用访问文件系统。</li>
+<li>网络通信：内核提供网络通信接口，负责管理网络连接并允许应用进行网络通信。</li>
+<li>设备驱动</li>
+<li>同步互斥</li>
+<li>系统调用接口：内核提供给应用程序访问系统服务的入口，应用程序通过系统调用接口调用操作系统提供的服务，如文件系统、网络通信、进程管理等。</li>
+</ol>
+<p>一个典型的UNIX操作系统的组成示意图：</p>
+<p><a target="_blank" rel="noopener" href="https://rcore-os.cn/rCore-Tutorial-Book-v3/_images/ucorearch.png"><img data-fancybox="gallery" data-sizes="auto" data-src="https://rcore-os.cn/rCore-Tutorial-Book-v3/_images/ucorearch.png" alt="../_images/ucorearch.png" class="lazyload"></a></p>
+<h1><span id="操作系统的系统调用接口">操作系统的系统调用接口</span></h1><h2><span id="api与abi">API与ABI</span></h2><p>OS Kernal 是一个提供各种<strong>服务</strong> 的软件，服务对象事应用，用户是通过应用的服务简介获得OS的服务。因此内核是隐藏的，需要通过OS与用户态软件之间的接口也就是</p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2024/04/27/rCore-Chap0/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2024&#x2F;04&#x2F;27&#x2F;rCore-Chap0&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2024&#x2F;04&#x2F;27&#x2F;rCore-Chap0&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			      
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/rCore/" rel="tag">rCore</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

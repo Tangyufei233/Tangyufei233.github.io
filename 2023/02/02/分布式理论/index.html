@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 分布式理论 -  Develop Blogs of YufeiTang</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://clipground.com/images/p5-logo-3.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Develop Blogs of YufeiTang">
+        <img
+			src="/img/favicon.png"
+			alt="Yufei Tang"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/favicon.png" title="Yufei Tang">
+			<img
+				src="/img/favicon.png"
+				alt="Yufei Tang"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>25</div>
+		<div><span>标签</span>9</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3303883421&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/6553841"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Tangyufei233/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/tangyufei233"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/分布式/">
+              分布式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/安全/">
+              安全
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/编程/">
+              编程
+            </a>
+            <span class="category-list-count">14</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/DataBase/" style="font-size: 13.33px;">DataBase</a> <a href="/tags/Golang/" style="font-size: 16.67px;">Golang</a> <a href="/tags/rCore/" style="font-size: 10px;">rCore</a> <a href="/tags/talos/" style="font-size: 13.33px;">talos</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 13.33px;">分布式</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 20px;">后端</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">Yufei Tang</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://i.imgtg.com/2023/03/18/l38BX.jpg"
+				data-sizes="auto"
+				alt="分布式理论"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>分布式理论</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年02月02日</a>
+			<a><i class="kirafont icon-edit-fill"></i>3k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 12 分钟</a>
+		</div>
+		<h3><span id="常见分布式系统">常见分布式系统</span></h3><p>分布式存储：</p>
+<pre><code>1. Google File System(GFS)
+2. Ceph
+3. Hadoop HDFS
+4. Zookeeper
+</code></pre>
+<p>分布式数据库</p>
+<pre><code>1. Google Spanner
+2. TiDB
+3. HBase
+4. MongoDB
+</code></pre>
+<p>分布式计算</p>
+<pre><code>1. Hadoop
+2. Spark
+3. YARN
+</code></pre>
+<h3><span id="故障模型">故障模型</span></h3><ul>
+<li><code>Byzantine failure</code>：节点可以任意篡改发送给其他节点的数据<br> -<code>Authentication detecttable byzantine failure(ADB)</code>：<code>Byzantine failure</code>特例，节点可以篡改数据，但不能伪造其他节点的数据</li>
+<li><code>Performance failure</code>：节点未在特定时间段内收到数据，即时间太早或太晚</li>
+<li><code>Omission failure</code>：节点收到数据的时间无限晚，即收不到数据</li>
+<li><code>Crash failure</code>：在<code>omission failure</code>的基础上，增加了节点停止响应的假设，也即持续性地omission failure</li>
+<li><code>Fail-stop failure</code>：在<code>Crash failure</code>的基础上增加了错误可检测的假设</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>故障</th>
+<th>可能类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>磁盘故障</td>
+<td><code>Fail-stop</code></td>
+</tr>
+<tr>
+<td>磁盘坏道\坏块</td>
+<td><code>Fail-stop,ABD</code></td>
+</tr>
+<tr>
+<td>服务器主板、板卡故障</td>
+<td><code>Crash</code></td>
+</tr>
+<tr>
+<td>网络故障</td>
+<td><code>Byzantine，Omission</code></td>
+</tr>
+<tr>
+<td>网络分区</td>
+<td><code>Performance</code></td>
+</tr>
+<tr>
+<td>内存故障</td>
+<td><code>ADB</code></td>
+</tr>
+<tr>
+<td>线缆故障</td>
+<td><code>Performance，Omission</code></td>
+</tr>
+<tr>
+<td>内核崩溃</td>
+<td><code>Crash</code></td>
+</tr>
+<tr>
+<td>CPU故障</td>
+<td><code>Omission、Crash</code></td>
+</tr>
+<tr>
+<td>电源故障</td>
+<td><code>Omission</code></td>
+</tr>
+<tr>
+<td>软件故障</td>
+<td><code>Byzantine、Crash</code>等</td>
+</tr>
+</tbody></table>
+<h4><span id="拜占庭将军问题">拜占庭将军问题</span></h4><ul>
+<li>两将军问题：永远无法达成共识<br><br>方案一：同时发送N个信使，任何一个达到敌方军队，都算成功。<br><br>方案二：设置超时时间，发送后未在一定时间返回，则加派信使。</li>
+</ul>
+<p><code>TCP</code> 三次握手是两将军问题工程解</p>
+<ul>
+<li>三将军问题<ul>
+<li>当有一个将军是”叛徒“，整个系统无法达成一致。</li>
+</ul>
+</li>
+<li>四将军问题<ul>
+<li>如果消息分发中枢D为”叛徒 “，ABC总能达成一致</li>
+<li>D为”忠将“，最终决策符合大多数</li>
+<li>当有3m+1个将军，m个”叛徒“，可以进行m轮协商，最终达成一致。</li>
+</ul>
+</li>
+</ul>
+<h4><span id="共识和一致性">共识和一致性</span></h4><p>不同客户端A和B看到客户端C写入，因为时机不同，产生数据读取的偏差。引导出最终一致性的详细说明<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1585aa933a904714b6d028e0e6e87c8c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>要保证所有客户端看到相同的值，需要多节点进行”协商“，达成共识，来保证线性一致性<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab90184005b749c78496b8f951f797ea~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>一致性和可用性是矛盾的</p>
+<h4><span id="时间和事件顺序">时间和事件顺序</span></h4><p>拜占庭将军问题提出者Leslie Lamport于1978年发表《<em>Time, Clocks, and the Ordering of Events in a Distributed System》</em></p>
+<ul>
+<li>定义了计算机系统中的时间和事件顺序，引入<em>happened before</em>和并发的定义，可以以此对分布式系统中的事件进行推导<ul>
+<li>如果 a 和 b 是在相同节点的两个事件，a 在 b 之前发生，则定义：a➺b</li>
+<li>如果事件 a 表示某个节点发送某条消息，b 是另一个节点接受这条消息，则有a ➺ b</li>
+<li>当且仅当a ⇏ b且b ⇏ a时，这两个事件为并发的</li>
+</ul>
+</li>
+<li>根据上述推导，创造了Lamport逻辑时钟的概念，这个概念在分布式理论中具有革命性的意义，帮助我们在一系列分布式事件当中梳理出逻辑的先后关系。利用逻辑时钟，我们可以对整个系统中的事件进行全序排序<ul>
+<li>如果a 和 b 是在相同节点 Pi 上的两个事件，a 在 b 之前发生，则有Ci(a) &lt; Ci(b)</li>
+<li>如果事件 a 表示节点 Pi 发送某条消息，b 表示节点 Pj接受这条消息，则有Ci(a) &lt; Cj(b)</li>
+</ul>
+</li>
+</ul>
+<h4><span id="cap理论">CAP理论</span></h4><ul>
+<li><p>CAP的定义，分别代表一致性、可用性、分区容错性。三者无法同时达到</p>
+</li>
+<li><p>CAP诞生了三类系统：</p>
+<ul>
+<li>CA系统：传统数据库的代表</li>
+<li>AP系统：放弃强一致性，保证高可用，不少nosql存储系统采用</li>
+<li>CP系统：放弃可用性，保证数据一致性</li>
+</ul>
+</li>
+<li><p>举例说明两个分布式进程之间同步数据，当出现故障的时候，如何选择不同的CAP系统，以及带来的影响</p>
+<ul>
+<li>CP系统：故障发生时，为了避免读到不一致的数据，可能拒绝访问</li>
+<li>AP系统：故障发生时，为了保证可用性，允许不同进程读到不同的数据</li>
+</ul>
+</li>
+<li><p>针对故障场景，可以通过故障转移的方式，做一个相对较优的解决方式：</p>
+<ul>
+<li>允许一个进程作为Master，其他进程作为Backup，当故障时将请求转移给Backup进行处理</li>
+</ul>
+</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/134cd2791b7142f08be1fce5d4fe998a~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="acid理论">ACID理论</span></h4><ul>
+<li>ACID理论是针对CA系统而言的，通常在数据库中具有广泛意义</li>
+<li>事务是数据库系统中非常重要的概念，它是数据库管理系统执行过程中的一个逻辑单元，它能够保证一个事务中的所有操作要么全部执行，要么全都不执行</li>
+<li>数据库事务拥有四个特性ACID：原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability）</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2cbd1474c08a4a0c907dcf579d4f037c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0c7f0312c9df402696e3df507a5d1aca~tplv-k3u1fbpfcp-zoom-1.image"></p>
+<p>AC是要一定要保证的，Oracle数据库保证不了I，MySQL保证不了D</p>
+<h3><span id="分布式事务">分布式事务</span></h3><h4><span id="二阶段提交">二阶段提交</span></h4><ul>
+<li><p>定义：</p>
+<ul>
+<li>二阶段提交（Two-phase Commit）：为了使基于分布式系统架构下的所有节点在进行事务提交时保持一致性而设计的一种演算法。</li>
+</ul>
+</li>
+<li><p>三个假设：</p>
+<ul>
+<li>协调者和参与者进行通信</li>
+<li>预写式日志被保持在可靠的存储设备上</li>
+<li>所有节点不会永久性损坏，即使损坏后仍然可以恢复</li>
+</ul>
+</li>
+<li><p>正常流程：Prepare阶段和Commit阶段</p>
+</li>
+<li><p>异常流程：Prepare阶段失败 -&gt; 回滚；协调者宕机 -&gt; 重新启用新的协调者；双故障重启 -&gt; 数据库管理员介入</p>
+</li>
+<li><p>两阶段提交需解决的问题：</p>
+<ul>
+<li>性能问题：需要多次网络通信，资源需要等待并锁定</li>
+<li>新协调者：如何确定状态选出新协调者</li>
+<li>Commit阶段网络分区带来的数据不一致：非所有节点都收到Commit请求</li>
+</ul>
+</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/956c2694ad80486d843d177f885e743b~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="三阶段提交">三阶段提交</span></h4><ul>
+<li>针对两阶段提交的补充，将两阶段提交中的Prepare阶段，拆成两部分：CanCommit和PreCommit机制</li>
+<li>CanCommit阶段：询问是否可以执行；PreCommit阶段：重新确认是否可以执行</li>
+<li>DoCommit阶段：向所有人提交事务</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9ae45a195cc4066a171b3bf9aff45c8~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="mvcc">MVCC</span></h4><ul>
+<li><p>MVCC：多版本并发控制的方法。维持一个数据的多个版本使读写操作没有冲突。所以既不会阻塞写，也不阻塞读。提高并发性能的同时也解决了脏读的问题。</p>
+</li>
+<li><p>悲观锁和乐观锁</p>
+<ul>
+<li>悲观锁：操作数据时直接把数据锁住，直到操作完成后才会释放锁；上锁期间其他人不能修改数据</li>
+<li>乐观锁：不会上锁，只是在执行更新时判断别人是否修改数据，只有冲突时才放弃操作</li>
+</ul>
+</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b495352608648d4acbd2601f9d0aff2~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<ul>
+<li><p>版本的选取：使用物理时钟或逻辑时钟</p>
+<ul>
+<li>物理时钟：提供TrueTime API，有Master节点维持一个绝对时间，保证各个服务器之间时钟误差控制在ϵ内，通常ϵ&lt;7ms。</li>
+<li>逻辑时钟：中心化授时的方式–时间戳预言机（TSO），好处是无需硬件的支持</li>
+</ul>
+</li>
+</ul>
+<h3><span id="共识协议">共识协议</span></h3><h4><span id="quorum-nwr模型">Quorum NWR模型</span></h4><ul>
+<li><p>三要素：</p>
+<ul>
+<li>N：在分布式存储系统中，有多少份备份数据</li>
+<li>W：代表一次成功的更新操作要求至少有w份数据写入成功</li>
+<li>R： 代表一次成功的读数据操作要求至少有R份数据成功读取</li>
+<li>为了保证强一致性，需要保证 W+R&gt;N</li>
+</ul>
+</li>
+<li><p>Quorum NWR模型将CAP的选择交给用户，是一种简化版的一致性模型</p>
+</li>
+<li><p>引起的并发更新问题</p>
+<ul>
+<li>如果允许数据被覆盖，则并发更新容易引起一致性问题</li>
+</ul>
+</li>
+</ul>
+<h4><span id="raft协议">RAFT协议</span></h4><ul>
+<li><p>概述</p>
+<ul>
+<li>Raft协议是一种分布式一致性算法（共识算法），即使出现部分节点故障，网络延时等情况，也不影响各节点，进而提高系统的整体可用性。Raft是使用较为广泛的分布式协议。</li>
+</ul>
+</li>
+<li><p>三种角色</p>
+<ul>
+<li>Leader - 领导者：Leader 负责处理所有的客户端请求，并向Follower同步请求日志，当日志同步到大多数节点上后，通知Follower提交日志</li>
+<li>Follower - 跟随者：接受并持久化Leader同步的日志，在Leader告知日志可以提交后，提交日志</li>
+<li>Candidate - 备选者：Leader选举过程中的临时角色。向其他节点发送请求投票信息</li>
+</ul>
+</li>
+<li><p>四种定义：</p>
+<ul>
+<li>Log（日志）：节点之间同步的信息，以只追加写的方式进行同步，解决了数据被覆盖的问题</li>
+<li>Term（任期号）：单调递增，每个Term内最多只有一个Leader</li>
+<li>Committed：日志被复制到多数派节点，即可认为已经被提交</li>
+<li>Applied：日志被应用到本地状态机：执行了log中命令，修改了内存状态</li>
+</ul>
+</li>
+<li><p>状态转移：</p>
+<ul>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d21d285438f4732be000cec1e8fb8cb~tplv-k3u1fbpfcp-zoom-1.image"></li>
+</ul>
+</li>
+</ul>
+<h4><span id="raft协议">RAFT协议</span></h4><p>中文版文献：<a target="_blank" rel="noopener" href="https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md">https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md</a></p>
+<ul>
+<li><p>概述</p>
+<ul>
+<li>Raft协议是一种分布式一致性算法（共识算法），即使出现部分节点故障，网络延时等情况，也不影响各节点，进而提高系统的整体可用性。Raft是使用较为广泛的分布式协议。</li>
+</ul>
+</li>
+<li><p>三种角色</p>
+<ul>
+<li>Leader - 领导者：Leader 负责处理所有的客户端请求，并向Follower同步请求日志，当日志同步到大多数节点上后，通知Follower提交日志</li>
+<li>Follower - 跟随者：接受并持久化Leader同步的日志，在Leader告知日志可以提交后，提交日志</li>
+<li>Candidate - 备选者：Leader选举过程中的临时角色。向其他节点发送请求投票信息</li>
+</ul>
+</li>
+<li><p>四种定义：</p>
+<ul>
+<li>Log（日志）：节点之间同步的信息，以只追加写的方式进行同步，解决了数据被覆盖的问题</li>
+<li>Term（任期号）：单调递增，每个Term内最多只有一个Leader</li>
+<li>Committed：日志被复制到多数派节点，即可认为已经被提交</li>
+<li>Applied：日志被应用到本地状态机：执行了log中命令，修改了内存状态</li>
+</ul>
+</li>
+<li><p>状态转移：</p>
+<ul>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/17bfd27cf63041e6a05929a08b12ed30~tplv-k3u1fbpfcp-zoom-1.image"></li>
+</ul>
+</li>
+</ul>
+<p><strong>RAFT协议中，Leader写成功日志Log20但未同步给Followers后宕机，Follower重新选举后产生一条新日志Log20，这时Leader重启，整个系统发现两种不一样的Log20的记录，请问如何区分并拒掉前面的Log20？</strong></p>
+<p>答：</p>
+<pre><code>在RAFT协议中，如果Leader写入了一条成功日志Log20但没有在宕机前与Followers同步，
+随后Follower重新选举产生了一条新日志Log20，当原先的Leader重启时，
+系统发现两种不同的Log20记录，为了区分并拒绝先前的Log20，系统使用了term编号的概念。
+每个日志条目都被分配了一个term编号，这是在创建条目时leader的term。
+具有较高term编号的日志条目被认为是更近的，因此被采纳为正确的。
+在这种情况下，具有较高term编号的日志将被保留，而具有较低term编号的日志将被拒绝。
+</code></pre>
+<p><strong>RAFT协议中，Stale读是如何产生的？该如何解决Stale读的问题？</strong></p>
+<p>答：</p>
+<h4><span id="paxos协议">Paxos协议</span></h4><ul>
+<li><p>Paxos算法与RAFT算法区别：</p>
+<ul>
+<li>Multi-Paxos 可以并发修改日志，而Raft写日志操作必须是连续的</li>
+<li>Multi-Paxos 可以随机选主，不必最新最全的节点当选Leader</li>
+</ul>
+</li>
+<li><p>优劣势</p>
+<ul>
+<li>优势：写入并发性能高，所有节点都能写</li>
+<li>劣势：没有一个节点有完整的最新的数据，恢复流程复杂，需要同步历史记录</li>
+</ul>
+</li>
+</ul>
+<h1><span id="实践练习例子"><strong>实践练习例子：</strong></span></h1><h4><span id="mapreduce">MapReduce</span></h4><ul>
+<li>设计一个简易的MapReduce系统，思考如何应对故障？</li>
+</ul>
+<h4><span id="分布式kv">分布式KV</span></h4><ul>
+<li>设计一个简易的分布式键值系统，要求具备弹性的能力和达成线性一致</li>
+</ul>
+<h4><span id="mapreduce">MapReduce</span></h4><ul>
+<li>设计一个简易的MapReduce系统，思考如何应对故障？</li>
+</ul>
+<h4><span id="分布式kv">分布式KV</span></h4><ul>
+<li>设计一个简易的分布式键值系统，要求具备弹性的能力和达成线性一致</li>
+</ul>
+<h1><span id="个人总结"><strong>个人总结：</strong></span></h1><p>感觉最难的是共识协议，这部分十分抽象,很难理解。</p>
+<p>学习参考文献：</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/612cdb24d76942fba58ca1ea618bde22~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/02/02/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;02&#x2F;02&#x2F;分布式理论&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;02&#x2F;02&#x2F;分布式理论&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			      
+			<!-- 先找到与当前文字相同的目录 -->
+			   
+			<!-- 在找到当前文章所在的 index -->
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/02/09/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"> 分布式定时任务</a>
+			</div>
+			              
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" rel="tag">分布式</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

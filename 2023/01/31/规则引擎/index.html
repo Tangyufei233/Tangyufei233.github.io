@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 规则引擎 -  Develop Blogs of YufeiTang</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://clipground.com/images/p5-logo-3.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20190910/b253a0872608436296c79d164dbe5591.jpeg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Develop Blogs of YufeiTang">
+        <img
+			src="/img/favicon.png"
+			alt="Yufei Tang"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/favicon.png" title="Yufei Tang">
+			<img
+				src="/img/favicon.png"
+				alt="Yufei Tang"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>25</div>
+		<div><span>标签</span>9</div>
+		<div><span>分类</span>3</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3303883421&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/6553841"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Tangyufei233/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/tangyufei233"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/分布式/">
+              分布式
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/安全/">
+              安全
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/编程/">
+              编程
+            </a>
+            <span class="category-list-count">14</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/DataBase/" style="font-size: 13.33px;">DataBase</a> <a href="/tags/Golang/" style="font-size: 16.67px;">Golang</a> <a href="/tags/rCore/" style="font-size: 10px;">rCore</a> <a href="/tags/talos/" style="font-size: 13.33px;">talos</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 13.33px;">分布式</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 20px;">后端</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">Yufei Tang</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://i.imgtg.com/2023/03/18/l3YHS.jpg"
+				data-sizes="auto"
+				alt="规则引擎"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>规则引擎</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年01月31日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.1k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 4 分钟</a>
+		</div>
+		<h3><span id="认识规则引擎">认识规则引擎</span></h3><p>一个抖音商城的例子，帮助我们去理解了规则引擎的主要一个作用。<br><br>输入：计算规则、商品价格、用户标签、商品属性…<br><br>输出：积分<br>要做到规则简单容易配置、可拓展。</p>
+<h4><span id="规则引擎定义">规则引擎定义</span></h4><p>是一种嵌入在应用程序中的组件，实现了将业务决策从应用程序代码中分离出来，并使用预定义的语义模块编写业务决策。接受数据输入，解释业务规则，并根据业务规则做出业务决策。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff01ad15f5ad4cc9add63589e29a62b3~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>如果没有规则引擎，那么每次修改规则决策，就要去写、修改很多if…else条件，大大降低了效率。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/01bf2dbb51744b6288711f8cf28001aa~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>有了规则引擎，就可以解决开发人员重复编码的问题。使得业务决策与服务本身解耦，提高服务的可维护性，缩短开发路径，提高效率</p>
+<h4><span id="规则引擎组成部分">规则引擎组成部分</span></h4><ol>
+<li>数据输入（接受使用预定义的语义编写的规则作为策略集）</li>
+<li>规则理解（能够按照预先定义的词法、语法、优先级】运算符等正确理解业务规则所表达的语义）</li>
+<li>规则执行（根据输入参数对规则正确解释）</li>
+</ol>
+<h4><span id="规则引擎应用场景">规则引擎应用场景</span></h4><ol>
+<li>风控对抗</li>
+<li>活动策略运营</li>
+<li>数据分析和清洗</li>
+</ol>
+<p>常用于业务流程自动化，决策支持，事件驱动系统等。</p>
+<h3><span id="编译原理基本概念">编译原理基本概念</span></h3><p>主要涉及的就是词法分析、语法分析、抽象语法树、类型检查的概念和应用，还未涉及到编译原理的深层知识。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3951390bf2c143f2b07bd5aea624f6a1~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="词法分析">词法分析</span></h4><p>词法分析就是把源代码字符串转换为词法单元(Token)的这个过程</p>
+<p>Token是指程序中的一种最小语法单位，用于描述代码的语法结构。例如，标识符，关键字，数字和符号都可以作为词法单元token。在编译过程中，词法分析器会将程序代码分解成词法单元token，然后交给语法分析器进行进一步处理。</p>
+<p>通过两个例子理解了词法分析</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c4abb09c42a43c1b525c4fa70c2fac2~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>并且引入了有限状态机去识别token</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f3e327da17fe4e2785f0f542150c2acb~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h4><span id="语法分析">语法分析</span></h4><p>语法分析就是在词法分析的基础上，识别表达式的语法结构的过程。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/470dde1fc74440748b74ef4ae0c83dfe~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>通过之前的两个例子，去理解语法分析的过程，比如说price &gt; 500是个比较表达式左操作数右操作可以是一些常量、参数等等，同时引入了抽象语法树。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/276d8868c86a49c18810ecf428349067~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h5><span id="抽象语法树">抽象语法树</span></h5><h6><span id="上下文无关语法">上下文无关语法</span></h6><p>上下文无关语法（Context-Free Grammar）是一种形式语言模型，用于描述语言中的语法规则。它通过定义语法产生式（Production Rules）来描述从一种语法元素（Non-terminal）如何推导出另一种语法元素（Terminal）的过程。上下文无关语法不考虑语法元素的具体上下文，因此它是无关上下文的。它是编译原理中常用的语法模型，用于构建语法分析器。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4fc205dff77948f699b396e584180df5~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"></p>
+<h6><span id="递归下降算法">递归下降算法</span></h6><p>自顶向下构造语法树<br><br>不断的对Token进行语法展开（下降），展开过程中可能会遇到递归情况。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db2295f2ee4a499487c511650b8c6096~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>通过上图的例子，为我们展示了Token展开的过程，当中涉及到的递归。</p>
+<h5><span id="类型检查">类型检查</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5bdddf9186b94fddad066e34e8024bb9~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>编译时检查，通过声明参数类型在构造语法树时发现不对。<br><br>执行时检查：通过在执行时检查参数类型</p>
+<h3><span id="设计规则引擎">设计规则引擎</span></h3><h4><span id="设计目标">设计目标</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8ccd46ce4f044850b2c20f664616a7dd~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>需要规定词法、数据类型、运算符、和优先级等。</p>
+<h4><span id="词法分析">词法分析</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f18ac8dc081f45f69265e4fbb50ca7ca~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>通过输入设计出词法分析的状态机，也要注意内部名称不能被名称、变量使用等</p>
+<h4><span id="语法分析">语法分析</span></h4><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e085e91cb8274f3eb12cf699cdf277c0~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>定义巴科斯范式，再定义优先级的表达，并设计语法树结构。</p>
+<h5><span id="语法树执行与类型检查">语法树执行与类型检查</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fc3dc66fe9444adaaf1a477ec1e6c2f1~tplv-k3u1fbpfcp-watermark.image" alt="image.png" class="lazyload"><br>不采用编译时检查因为需要预先定义一些类型定义一些变量，工作量稍大。</p>
+<p><br><strong>项目地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/qimengxingyuan/young_engine">qimengxingyuan&#x2F;young_engine: 简单的规则引擎 (github.com)</a></p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>Yufei Tang<br>
+        <strong>本文链接：</strong><a href="https://tangyufei233.github.io/2023/01/31/%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/" title="https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;01&#x2F;31&#x2F;规则引擎&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;tangyufei233.github.io&#x2F;2023&#x2F;01&#x2F;31&#x2F;规则引擎&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			                        
+			<!-- 在找到当前文章所在的 index -->
+			                            
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2023/01/29/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/"> 后端开发流程</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2023/02/01/%E6%9E%B6%E6%9E%84%E5%88%9D%E6%8E%A2/"> 架构初探</a>
+			</div>
+			                                                     
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
